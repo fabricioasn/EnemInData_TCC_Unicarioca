@@ -1,0 +1,1 @@
+Folder destinated for Monography text documentation also for application`s specifications details
