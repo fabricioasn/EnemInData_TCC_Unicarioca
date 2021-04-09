@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{6870E480-7721-4708-BFB8-9AE898AA21B3}") = "EnemVS", "EnemVS.smproj", "{55447298-55DF-4A15-9A6D-C396B4D2C107}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|x86 = Development|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{55447298-55DF-4A15-9A6D-C396B4D2C107}.Development|x86.ActiveCfg = Development|x86
+		{55447298-55DF-4A15-9A6D-C396B4D2C107}.Development|x86.Build.0 = Development|x86
+		{55447298-55DF-4A15-9A6D-C396B4D2C107}.Development|x86.Deploy.0 = Development|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EE44B518-2C02-4976-884B-D2EE5BDE93FE}
+	EndGlobalSection
+EndGlobal
