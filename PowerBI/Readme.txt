@@ -1,0 +1,1 @@
+Folder destinated for PowerBI scripts to data visualization and exibition
