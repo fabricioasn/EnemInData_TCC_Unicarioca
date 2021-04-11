@@ -1,0 +1,745 @@
+{
+  "name": "EnemVS",
+  "compatibilityLevel": 1500,
+  "model": {
+    "name": "Modelo",
+    "culture": "pt-BR",
+    "dataSources": [
+      {
+        "type": "structured",
+        "name": "DataLake/https://enemdatallake azuredatalakestore net/MICRODADOS_ENEM_2019 csv/",
+        "connectionDetails": {
+          "protocol": "data-lake-store",
+          "address": {
+            "url": "adl://enemdatallake.azuredatalakestore.net/MICRODADOS_ENEM_2019.csv"
+          }
+        },
+        "options": {
+          "pageSize": null
+        },
+        "credential": {
+          "AuthenticationKind": "OAuth2",
+          "kind": "DataLake",
+          "path": "https://enemdatallake.azuredatalakestore.net/MICRODADOS_ENEM_2019.csv",
+          "Expires": "Fri, 09 Apr 2021 14:56:30 GMT"
+        }
+      }
+    ],
+    "tables": [
+      {
+        "name": "Table",
+        "columns": [
+          {
+            "name": "SG_UF_RESIDENCIA",
+            "dataType": "string",
+            "sourceColumn": "SG_UF_RESIDENCIA"
+          },
+          {
+            "name": "NU_IDADE",
+            "dataType": "int64",
+            "sourceColumn": "NU_IDADE"
+          },
+          {
+            "name": "NO_MUNICIPIO_NASCIMENTO",
+            "dataType": "string",
+            "sourceColumn": "NO_MUNICIPIO_NASCIMENTO"
+          },
+          {
+            "name": "NO_MUNICIPIO_ESC",
+            "dataType": "string",
+            "sourceColumn": "NO_MUNICIPIO_ESC"
+          },
+          {
+            "name": "SG_UF_ESC",
+            "dataType": "string",
+            "sourceColumn": "SG_UF_ESC"
+          },
+          {
+            "name": "TP_DEPENDENCIA_ADM_ESC",
+            "dataType": "int64",
+            "sourceColumn": "TP_DEPENDENCIA_ADM_ESC"
+          },
+          {
+            "name": "TP_LOCALIZACAO_ESC",
+            "dataType": "int64",
+            "sourceColumn": "TP_LOCALIZACAO_ESC"
+          },
+          {
+            "name": "TP_SIT_FUNC_ESC",
+            "dataType": "int64",
+            "sourceColumn": "TP_SIT_FUNC_ESC"
+          },
+          {
+            "name": "IN_BAIXA_VISAO",
+            "dataType": "int64",
+            "sourceColumn": "IN_BAIXA_VISAO"
+          },
+          {
+            "name": "IN_CEGUEIRA",
+            "dataType": "int64",
+            "sourceColumn": "IN_CEGUEIRA"
+          },
+          {
+            "name": "IN_SURDEZ",
+            "dataType": "int64",
+            "sourceColumn": "IN_SURDEZ"
+          },
+          {
+            "name": "IN_DEFICIENCIA_AUDITIVA",
+            "dataType": "int64",
+            "sourceColumn": "IN_DEFICIENCIA_AUDITIVA"
+          },
+          {
+            "name": "IN_SURDO_CEGUEIRA",
+            "dataType": "int64",
+            "sourceColumn": "IN_SURDO_CEGUEIRA"
+          },
+          {
+            "name": "IN_DEFICIENCIA_FISICA",
+            "dataType": "int64",
+            "sourceColumn": "IN_DEFICIENCIA_FISICA"
+          },
+          {
+            "name": "IN_DEFICIENCIA_MENTAL",
+            "dataType": "int64",
+            "sourceColumn": "IN_DEFICIENCIA_MENTAL"
+          },
+          {
+            "name": "IN_DEFICIT_ATENCAO",
+            "dataType": "int64",
+            "sourceColumn": "IN_DEFICIT_ATENCAO"
+          },
+          {
+            "name": "IN_DISLEXIA",
+            "dataType": "int64",
+            "sourceColumn": "IN_DISLEXIA"
+          },
+          {
+            "name": "IN_DISCALCULIA",
+            "dataType": "int64",
+            "sourceColumn": "IN_DISCALCULIA"
+          },
+          {
+            "name": "IN_AUTISMO",
+            "dataType": "int64",
+            "sourceColumn": "IN_AUTISMO"
+          },
+          {
+            "name": "IN_VISAO_MONOCULAR",
+            "dataType": "int64",
+            "sourceColumn": "IN_VISAO_MONOCULAR"
+          },
+          {
+            "name": "IN_OUTRA_DEF",
+            "dataType": "int64",
+            "sourceColumn": "IN_OUTRA_DEF"
+          },
+          {
+            "name": "IN_GESTANTE",
+            "dataType": "int64",
+            "sourceColumn": "IN_GESTANTE"
+          },
+          {
+            "name": "IN_LACTANTE",
+            "dataType": "int64",
+            "sourceColumn": "IN_LACTANTE"
+          },
+          {
+            "name": "IN_IDOSO",
+            "dataType": "int64",
+            "sourceColumn": "IN_IDOSO"
+          },
+          {
+            "name": "IN_ESTUDA_CLASSE_HOSPITALAR",
+            "dataType": "int64",
+            "sourceColumn": "IN_ESTUDA_CLASSE_HOSPITALAR"
+          },
+          {
+            "name": "IN_SEM_RECURSO",
+            "dataType": "int64",
+            "sourceColumn": "IN_SEM_RECURSO"
+          },
+          {
+            "name": "IN_BRAILLE",
+            "dataType": "int64",
+            "sourceColumn": "IN_BRAILLE"
+          },
+          {
+            "name": "IN_AMPLIADA_24",
+            "dataType": "int64",
+            "sourceColumn": "IN_AMPLIADA_24"
+          },
+          {
+            "name": "IN_AMPLIADA_18",
+            "dataType": "int64",
+            "sourceColumn": "IN_AMPLIADA_18"
+          },
+          {
+            "name": "IN_LEDOR",
+            "dataType": "int64",
+            "sourceColumn": "IN_LEDOR"
+          },
+          {
+            "name": "IN_ACESSO",
+            "dataType": "int64",
+            "sourceColumn": "IN_ACESSO"
+          },
+          {
+            "name": "IN_TRANSCRICAO",
+            "dataType": "int64",
+            "sourceColumn": "IN_TRANSCRICAO"
+          },
+          {
+            "name": "IN_LIBRAS",
+            "dataType": "int64",
+            "sourceColumn": "IN_LIBRAS"
+          },
+          {
+            "name": "IN_TEMPO_ADICIONAL",
+            "dataType": "int64",
+            "sourceColumn": "IN_TEMPO_ADICIONAL"
+          },
+          {
+            "name": "IN_LEITURA_LABIAL",
+            "dataType": "int64",
+            "sourceColumn": "IN_LEITURA_LABIAL"
+          },
+          {
+            "name": "IN_MESA_CADEIRA_RODAS",
+            "dataType": "int64",
+            "sourceColumn": "IN_MESA_CADEIRA_RODAS"
+          },
+          {
+            "name": "IN_MESA_CADEIRA_SEPARADA",
+            "dataType": "int64",
+            "sourceColumn": "IN_MESA_CADEIRA_SEPARADA"
+          },
+          {
+            "name": "IN_APOIO_PERNA",
+            "dataType": "int64",
+            "sourceColumn": "IN_APOIO_PERNA"
+          },
+          {
+            "name": "IN_GUIA_INTERPRETE",
+            "dataType": "int64",
+            "sourceColumn": "IN_GUIA_INTERPRETE"
+          },
+          {
+            "name": "IN_COMPUTADOR",
+            "dataType": "int64",
+            "sourceColumn": "IN_COMPUTADOR"
+          },
+          {
+            "name": "IN_CADEIRA_ESPECIAL",
+            "dataType": "int64",
+            "sourceColumn": "IN_CADEIRA_ESPECIAL"
+          },
+          {
+            "name": "IN_CADEIRA_CANHOTO",
+            "dataType": "int64",
+            "sourceColumn": "IN_CADEIRA_CANHOTO"
+          },
+          {
+            "name": "IN_CADEIRA_ACOLCHOADA",
+            "dataType": "int64",
+            "sourceColumn": "IN_CADEIRA_ACOLCHOADA"
+          },
+          {
+            "name": "IN_PROVA_DEITADO",
+            "dataType": "int64",
+            "sourceColumn": "IN_PROVA_DEITADO"
+          },
+          {
+            "name": "IN_MOBILIARIO_OBESO",
+            "dataType": "int64",
+            "sourceColumn": "IN_MOBILIARIO_OBESO"
+          },
+          {
+            "name": "IN_LAMINA_OVERLAY",
+            "dataType": "int64",
+            "sourceColumn": "IN_LAMINA_OVERLAY"
+          },
+          {
+            "name": "IN_PROTETOR_AURICULAR",
+            "dataType": "int64",
+            "sourceColumn": "IN_PROTETOR_AURICULAR"
+          },
+          {
+            "name": "IN_MEDIDOR_GLICOSE",
+            "dataType": "int64",
+            "sourceColumn": "IN_MEDIDOR_GLICOSE"
+          },
+          {
+            "name": "IN_MAQUINA_BRAILE",
+            "dataType": "int64",
+            "sourceColumn": "IN_MAQUINA_BRAILE"
+          },
+          {
+            "name": "IN_SOROBAN",
+            "dataType": "int64",
+            "sourceColumn": "IN_SOROBAN"
+          },
+          {
+            "name": "IN_MARCA_PASSO",
+            "dataType": "int64",
+            "sourceColumn": "IN_MARCA_PASSO"
+          },
+          {
+            "name": "IN_SONDA",
+            "dataType": "int64",
+            "sourceColumn": "IN_SONDA"
+          },
+          {
+            "name": "IN_MEDICAMENTOS",
+            "dataType": "int64",
+            "sourceColumn": "IN_MEDICAMENTOS"
+          },
+          {
+            "name": "IN_SALA_INDIVIDUAL",
+            "dataType": "int64",
+            "sourceColumn": "IN_SALA_INDIVIDUAL"
+          },
+          {
+            "name": "IN_SALA_ESPECIAL",
+            "dataType": "int64",
+            "sourceColumn": "IN_SALA_ESPECIAL"
+          },
+          {
+            "name": "IN_SALA_ACOMPANHANTE",
+            "dataType": "int64",
+            "sourceColumn": "IN_SALA_ACOMPANHANTE"
+          },
+          {
+            "name": "IN_MOBILIARIO_ESPECIFICO",
+            "dataType": "int64",
+            "sourceColumn": "IN_MOBILIARIO_ESPECIFICO"
+          },
+          {
+            "name": "IN_MATERIAL_ESPECIFICO",
+            "dataType": "int64",
+            "sourceColumn": "IN_MATERIAL_ESPECIFICO"
+          },
+          {
+            "name": "IN_NOME_SOCIAL",
+            "dataType": "int64",
+            "sourceColumn": "IN_NOME_SOCIAL"
+          },
+          {
+            "name": "NO_MUNICIPIO_PROVA",
+            "dataType": "string",
+            "sourceColumn": "NO_MUNICIPIO_PROVA"
+          },
+          {
+            "name": "SG_UF_PROVA",
+            "dataType": "string",
+            "sourceColumn": "SG_UF_PROVA"
+          },
+          {
+            "name": "TP_PRESENCA_CN",
+            "dataType": "int64",
+            "sourceColumn": "TP_PRESENCA_CN"
+          },
+          {
+            "name": "TP_PRESENCA_CH",
+            "dataType": "int64",
+            "sourceColumn": "TP_PRESENCA_CH"
+          },
+          {
+            "name": "TP_PRESENCA_LC",
+            "dataType": "int64",
+            "sourceColumn": "TP_PRESENCA_LC"
+          },
+          {
+            "name": "TP_PRESENCA_MT",
+            "dataType": "int64",
+            "sourceColumn": "TP_PRESENCA_MT"
+          },
+          {
+            "name": "CO_PROVA_CN",
+            "dataType": "double",
+            "sourceColumn": "CO_PROVA_CN"
+          },
+          {
+            "name": "CO_PROVA_CH",
+            "dataType": "double",
+            "sourceColumn": "CO_PROVA_CH"
+          },
+          {
+            "name": "CO_PROVA_LC",
+            "dataType": "double",
+            "sourceColumn": "CO_PROVA_LC"
+          },
+          {
+            "name": "CO_PROVA_MT",
+            "dataType": "double",
+            "sourceColumn": "CO_PROVA_MT"
+          },
+          {
+            "name": "TP_LINGUA",
+            "dataType": "int64",
+            "sourceColumn": "TP_LINGUA"
+          },
+          {
+            "name": "TP_STATUS_REDACAO",
+            "dataType": "int64",
+            "sourceColumn": "TP_STATUS_REDACAO"
+          },
+          {
+            "name": "NU_NOTA_COMP1",
+            "dataType": "int64",
+            "sourceColumn": "NU_NOTA_COMP1"
+          },
+          {
+            "name": "NU_NOTA_COMP2",
+            "dataType": "int64",
+            "sourceColumn": "NU_NOTA_COMP2"
+          },
+          {
+            "name": "NU_NOTA_COMP3",
+            "dataType": "int64",
+            "sourceColumn": "NU_NOTA_COMP3"
+          },
+          {
+            "name": "NU_NOTA_COMP4",
+            "dataType": "int64",
+            "sourceColumn": "NU_NOTA_COMP4"
+          },
+          {
+            "name": "NU_NOTA_COMP5",
+            "dataType": "int64",
+            "sourceColumn": "NU_NOTA_COMP5"
+          },
+          {
+            "name": "NU_NOTA_REDACAO",
+            "dataType": "int64",
+            "sourceColumn": "NU_NOTA_REDACAO"
+          },
+          {
+            "name": "INSCRICAO",
+            "dataType": "int64",
+            "sourceColumn": "INSCRICAO"
+          },
+          {
+            "name": "MUNICIPIO_RESIDENCIA",
+            "dataType": "string",
+            "sourceColumn": "MUNICIPIO_RESIDENCIA"
+          },
+          {
+            "name": "FAIXA_ETARIA",
+            "dataType": "string",
+            "sourceColumn": "FAIXA_ETARIA"
+          },
+          {
+            "name": "SEXO",
+            "dataType": "string",
+            "sourceColumn": "SEXO"
+          },
+          {
+            "name": "ESTADO_CIVIL",
+            "dataType": "string",
+            "sourceColumn": "ESTADO_CIVIL"
+          },
+          {
+            "name": "NOTA_CN",
+            "dataType": "double",
+            "sourceColumn": "NOTA_CN"
+          },
+          {
+            "name": "NOTA_CH",
+            "dataType": "double",
+            "sourceColumn": "NOTA_CH"
+          },
+          {
+            "name": "NOTA_LC",
+            "dataType": "double",
+            "sourceColumn": "NOTA_LC"
+          },
+          {
+            "name": "NOTA_MT",
+            "dataType": "double",
+            "sourceColumn": "NOTA_MT"
+          },
+          {
+            "name": "ANO",
+            "dataType": "int64",
+            "sourceColumn": "ANO"
+          },
+          {
+            "name": "CO_MUNICIPIO_RESIDENCIA",
+            "dataType": "int64",
+            "sourceColumn": "CO_MUNICIPIO_RESIDENCIA"
+          },
+          {
+            "name": "CO_UF_RESIDENCIA",
+            "dataType": "int64",
+            "sourceColumn": "CO_UF_RESIDENCIA"
+          },
+          {
+            "name": "TP_COR_RACA",
+            "dataType": "int64",
+            "sourceColumn": "TP_COR_RACA"
+          },
+          {
+            "name": "TP_NACIONALIDADE",
+            "dataType": "int64",
+            "sourceColumn": "TP_NACIONALIDADE"
+          },
+          {
+            "name": "CO_MUNICIPIO_NASCIMENTO",
+            "dataType": "int64",
+            "sourceColumn": "CO_MUNICIPIO_NASCIMENTO"
+          },
+          {
+            "name": "CO_UF_NASCIMENTO",
+            "dataType": "int64",
+            "sourceColumn": "CO_UF_NASCIMENTO"
+          },
+          {
+            "name": "SG_UF_NASCIMENTO",
+            "dataType": "string",
+            "sourceColumn": "SG_UF_NASCIMENTO"
+          },
+          {
+            "name": "TP_ST_CONCLUSAO",
+            "dataType": "int64",
+            "sourceColumn": "TP_ST_CONCLUSAO"
+          },
+          {
+            "name": "TP_ANO_CONCLUIU",
+            "dataType": "int64",
+            "sourceColumn": "TP_ANO_CONCLUIU"
+          },
+          {
+            "name": "TP_ESCOLA",
+            "dataType": "int64",
+            "sourceColumn": "TP_ESCOLA"
+          },
+          {
+            "name": "TP_ENSINO",
+            "dataType": "int64",
+            "sourceColumn": "TP_ENSINO"
+          },
+          {
+            "name": "IN_TREINEIRO",
+            "dataType": "int64",
+            "sourceColumn": "IN_TREINEIRO"
+          },
+          {
+            "name": "CO_ESCOLA",
+            "dataType": "int64",
+            "sourceColumn": "CO_ESCOLA"
+          },
+          {
+            "name": "CO_MUNICIPIO_ESC",
+            "dataType": "int64",
+            "sourceColumn": "CO_MUNICIPIO_ESC"
+          },
+          {
+            "name": "CO_UF_ESC",
+            "dataType": "int64",
+            "sourceColumn": "CO_UF_ESC"
+          },
+          {
+            "name": "CO_MUNICIPIO_PROVA",
+            "dataType": "int64",
+            "sourceColumn": "CO_MUNICIPIO_PROVA"
+          },
+          {
+            "name": "CO_UF_PROVA",
+            "dataType": "int64",
+            "sourceColumn": "CO_UF_PROVA"
+          },
+          {
+            "name": "Q1_ESTUO_PAI",
+            "dataType": "string",
+            "sourceColumn": "Q1_ESTUO_PAI"
+          },
+          {
+            "name": "Q2_ESTUDO_MAE",
+            "dataType": "string",
+            "sourceColumn": "Q2_ESTUDO_MAE"
+          },
+          {
+            "name": "Q3_OCUP_PAI",
+            "dataType": "string",
+            "sourceColumn": "Q3_OCUP_PAI"
+          },
+          {
+            "name": "Q4_OCUP_MAE",
+            "dataType": "string",
+            "sourceColumn": "Q4_OCUP_MAE"
+          },
+          {
+            "name": "Q5_QTD_PESS_RES",
+            "dataType": "int64",
+            "sourceColumn": "Q5_QTD_PESS_RES"
+          },
+          {
+            "name": "Q6_RENDA",
+            "dataType": "string",
+            "sourceColumn": "Q6_RENDA"
+          },
+          {
+            "name": "Q7_EMP_DOMES",
+            "dataType": "string",
+            "sourceColumn": "Q7_EMP_DOMES"
+          },
+          {
+            "name": "Q8_BANHEIRO",
+            "dataType": "string",
+            "sourceColumn": "Q8_BANHEIRO"
+          },
+          {
+            "name": "Q9_QUARTO",
+            "dataType": "string",
+            "sourceColumn": "Q9_QUARTO"
+          },
+          {
+            "name": "Q10_CARRO",
+            "dataType": "string",
+            "sourceColumn": "Q10_CARRO"
+          },
+          {
+            "name": "Q11_MOTO",
+            "dataType": "string",
+            "sourceColumn": "Q11_MOTO"
+          },
+          {
+            "name": "Q12_GELADEIRA",
+            "dataType": "string",
+            "sourceColumn": "Q12_GELADEIRA"
+          },
+          {
+            "name": "Q13_FREEZER",
+            "dataType": "string",
+            "sourceColumn": "Q13_FREEZER"
+          },
+          {
+            "name": "Q14_MQ_LV_ROUPA",
+            "dataType": "string",
+            "sourceColumn": "Q14_MQ_LV_ROUPA"
+          },
+          {
+            "name": "Q15_MQ_SC_ROUPA",
+            "dataType": "string",
+            "sourceColumn": "Q15_MQ_SC_ROUPA"
+          },
+          {
+            "name": "Q16_FORNO",
+            "dataType": "string",
+            "sourceColumn": "Q16_FORNO"
+          },
+          {
+            "name": "Q17_LV_LOUCA",
+            "dataType": "string",
+            "sourceColumn": "Q17_LV_LOUCA"
+          },
+          {
+            "name": "Q18_ASP_PO",
+            "dataType": "string",
+            "sourceColumn": "Q18_ASP_PO"
+          },
+          {
+            "name": "Q19_TV_CORES",
+            "dataType": "string",
+            "sourceColumn": "Q19_TV_CORES"
+          },
+          {
+            "name": "Q20_DVD",
+            "dataType": "string",
+            "sourceColumn": "Q20_DVD"
+          },
+          {
+            "name": "Q21_TV_ASS",
+            "dataType": "string",
+            "sourceColumn": "Q21_TV_ASS"
+          },
+          {
+            "name": "Q22_CELULAR",
+            "dataType": "string",
+            "sourceColumn": "Q22_CELULAR"
+          },
+          {
+            "name": "Q23_TEL_FIXO",
+            "dataType": "string",
+            "sourceColumn": "Q23_TEL_FIXO"
+          },
+          {
+            "name": "Q24_COMPUTADOR",
+            "dataType": "string",
+            "sourceColumn": "Q24_COMPUTADOR"
+          },
+          {
+            "name": "Q25_INTERNET",
+            "dataType": "string",
+            "sourceColumn": "Q25_INTERNET"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source=#\"DataLake/https://enemdatallake azuredatalakestore net/MICRODADOS_ENEM_2019 csv/\",",
+                "    Content = Source{[Name=\"\"]}[Content],",
+                "    #\"CSV Importado\" = Csv.Document(Content,[Delimiter=\";\", Columns=136, Encoding=1252, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(#\"CSV Importado\", [PromoteAllScalars=true]),",
+                "    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Cabeçalhos Promovidos\",{{\"NU_INSCRICAO\", Int64.Type}, {\"NU_ANO\", Int64.Type}, {\"CO_MUNICIPIO_RESIDENCIA\", Int64.Type}, {\"NO_MUNICIPIO_RESIDENCIA\", type text}, {\"CO_UF_RESIDENCIA\", Int64.Type}, {\"SG_UF_RESIDENCIA\", type text}, {\"NU_IDADE\", Int64.Type}, {\"TP_SEXO\", type text}, {\"TP_ESTADO_CIVIL\", Int64.Type}, {\"TP_COR_RACA\", Int64.Type}, {\"TP_NACIONALIDADE\", Int64.Type}, {\"CO_MUNICIPIO_NASCIMENTO\", Int64.Type}, {\"NO_MUNICIPIO_NASCIMENTO\", type text}, {\"CO_UF_NASCIMENTO\", Int64.Type}, {\"SG_UF_NASCIMENTO\", type text}, {\"TP_ST_CONCLUSAO\", Int64.Type}, {\"TP_ANO_CONCLUIU\", Int64.Type}, {\"TP_ESCOLA\", Int64.Type}, {\"TP_ENSINO\", Int64.Type}, {\"IN_TREINEIRO\", Int64.Type}, {\"CO_ESCOLA\", Int64.Type}, {\"CO_MUNICIPIO_ESC\", Int64.Type}, {\"NO_MUNICIPIO_ESC\", type text}, {\"CO_UF_ESC\", Int64.Type}, {\"SG_UF_ESC\", type text}, {\"TP_DEPENDENCIA_ADM_ESC\", Int64.Type}, {\"TP_LOCALIZACAO_ESC\", Int64.Type}, {\"TP_SIT_FUNC_ESC\", Int64.Type}, {\"IN_BAIXA_VISAO\", Int64.Type}, {\"IN_CEGUEIRA\", Int64.Type}, {\"IN_SURDEZ\", Int64.Type}, {\"IN_DEFICIENCIA_AUDITIVA\", Int64.Type}, {\"IN_SURDO_CEGUEIRA\", Int64.Type}, {\"IN_DEFICIENCIA_FISICA\", Int64.Type}, {\"IN_DEFICIENCIA_MENTAL\", Int64.Type}, {\"IN_DEFICIT_ATENCAO\", Int64.Type}, {\"IN_DISLEXIA\", Int64.Type}, {\"IN_DISCALCULIA\", Int64.Type}, {\"IN_AUTISMO\", Int64.Type}, {\"IN_VISAO_MONOCULAR\", Int64.Type}, {\"IN_OUTRA_DEF\", Int64.Type}, {\"IN_GESTANTE\", Int64.Type}, {\"IN_LACTANTE\", Int64.Type}, {\"IN_IDOSO\", Int64.Type}, {\"IN_ESTUDA_CLASSE_HOSPITALAR\", Int64.Type}, {\"IN_SEM_RECURSO\", Int64.Type}, {\"IN_BRAILLE\", Int64.Type}, {\"IN_AMPLIADA_24\", Int64.Type}, {\"IN_AMPLIADA_18\", Int64.Type}, {\"IN_LEDOR\", Int64.Type}, {\"IN_ACESSO\", Int64.Type}, {\"IN_TRANSCRICAO\", Int64.Type}, {\"IN_LIBRAS\", Int64.Type}, {\"IN_TEMPO_ADICIONAL\", Int64.Type}, {\"IN_LEITURA_LABIAL\", Int64.Type}, {\"IN_MESA_CADEIRA_RODAS\", Int64.Type}, {\"IN_MESA_CADEIRA_SEPARADA\", Int64.Type}, {\"IN_APOIO_PERNA\", Int64.Type}, {\"IN_GUIA_INTERPRETE\", Int64.Type}, {\"IN_COMPUTADOR\", Int64.Type}, {\"IN_CADEIRA_ESPECIAL\", Int64.Type}, {\"IN_CADEIRA_CANHOTO\", Int64.Type}, {\"IN_CADEIRA_ACOLCHOADA\", Int64.Type}, {\"IN_PROVA_DEITADO\", Int64.Type}, {\"IN_MOBILIARIO_OBESO\", Int64.Type}, {\"IN_LAMINA_OVERLAY\", Int64.Type}, {\"IN_PROTETOR_AURICULAR\", Int64.Type}, {\"IN_MEDIDOR_GLICOSE\", Int64.Type}, {\"IN_MAQUINA_BRAILE\", Int64.Type}, {\"IN_SOROBAN\", Int64.Type}, {\"IN_MARCA_PASSO\", Int64.Type}, {\"IN_SONDA\", Int64.Type}, {\"IN_MEDICAMENTOS\", Int64.Type}, {\"IN_SALA_INDIVIDUAL\", Int64.Type}, {\"IN_SALA_ESPECIAL\", Int64.Type}, {\"IN_SALA_ACOMPANHANTE\", Int64.Type}, {\"IN_MOBILIARIO_ESPECIFICO\", Int64.Type}, {\"IN_MATERIAL_ESPECIFICO\", Int64.Type}, {\"IN_NOME_SOCIAL\", Int64.Type}, {\"CO_MUNICIPIO_PROVA\", Int64.Type}, {\"NO_MUNICIPIO_PROVA\", type text}, {\"CO_UF_PROVA\", Int64.Type}, {\"SG_UF_PROVA\", type text}, {\"TP_PRESENCA_CN\", Int64.Type}, {\"TP_PRESENCA_CH\", Int64.Type}, {\"TP_PRESENCA_LC\", Int64.Type}, {\"TP_PRESENCA_MT\", Int64.Type}, {\"CO_PROVA_CN\", type number}, {\"CO_PROVA_CH\", type number}, {\"CO_PROVA_LC\", type number}, {\"CO_PROVA_MT\", type number}, {\"NU_NOTA_CN\", type number}, {\"NU_NOTA_CH\", type number}, {\"NU_NOTA_LC\", type number}, {\"NU_NOTA_MT\", type number}, {\"TX_RESPOSTAS_CN\", type text}, {\"TX_RESPOSTAS_CH\", type text}, {\"TX_RESPOSTAS_LC\", type text}, {\"TX_RESPOSTAS_MT\", type text}, {\"TP_LINGUA\", Int64.Type}, {\"TX_GABARITO_CN\", type text}, {\"TX_GABARITO_CH\", type text}, {\"TX_GABARITO_LC\", type text}, {\"TX_GABARITO_MT\", type text}, {\"TP_STATUS_REDACAO\", Int64.Type}, {\"NU_NOTA_COMP1\", Int64.Type}, {\"NU_NOTA_COMP2\", Int64.Type}, {\"NU_NOTA_COMP3\", Int64.Type}, {\"NU_NOTA_COMP4\", Int64.Type}, {\"NU_NOTA_COMP5\", Int64.Type}, {\"NU_NOTA_REDACAO\", Int64.Type}, {\"Q001\", type text}, {\"Q002\", type text}, {\"Q003\", type text}, {\"Q004\", type text}, {\"Q005\", Int64.Type}, {\"Q006\", type text}, {\"Q007\", type text}, {\"Q008\", type text}, {\"Q009\", type text}, {\"Q010\", type text}, {\"Q011\", type text}, {\"Q012\", type text}, {\"Q013\", type text}, {\"Q014\", type text}, {\"Q015\", type text}, {\"Q016\", type text}, {\"Q017\", type text}, {\"Q018\", type text}, {\"Q019\", type text}, {\"Q020\", type text}, {\"Q021\", type text}, {\"Q022\", type text}, {\"Q023\", type text}, {\"Q024\", type text}, {\"Q025\", type text}}),",
+                "    #\"Colunas Renomeadas\" = Table.RenameColumns(#\"Tipo Alterado\",{{\"NU_INSCRICAO\", \"INSCRICAO\"}, {\"NO_MUNICIPIO_RESIDENCIA\", \"MUNICIPIO_RESIDENCIA\"}}),",
+                "    #\"Coluna Condicional Adicionada\" = Table.AddColumn(#\"Colunas Renomeadas\", \"FAIXA_ETARIA\", each if [NU_IDADE] < 18 then \"<18\" else if [NU_IDADE] <= 24 then \"18 à 24\" else if [NU_IDADE] <= 35 then \"25 à 35\" else if [NU_IDADE] > 35 then \">35\" else null),",
+                "    #\"Colunas Reordenadas\" = Table.ReorderColumns(#\"Coluna Condicional Adicionada\",{\"INSCRICAO\", \"NU_ANO\", \"CO_MUNICIPIO_RESIDENCIA\", \"MUNICIPIO_RESIDENCIA\", \"CO_UF_RESIDENCIA\", \"SG_UF_RESIDENCIA\", \"NU_IDADE\", \"FAIXA_ETARIA\", \"TP_SEXO\", \"TP_ESTADO_CIVIL\", \"TP_COR_RACA\", \"TP_NACIONALIDADE\", \"CO_MUNICIPIO_NASCIMENTO\", \"NO_MUNICIPIO_NASCIMENTO\", \"CO_UF_NASCIMENTO\", \"SG_UF_NASCIMENTO\", \"TP_ST_CONCLUSAO\", \"TP_ANO_CONCLUIU\", \"TP_ESCOLA\", \"TP_ENSINO\", \"IN_TREINEIRO\", \"CO_ESCOLA\", \"CO_MUNICIPIO_ESC\", \"NO_MUNICIPIO_ESC\", \"CO_UF_ESC\", \"SG_UF_ESC\", \"TP_DEPENDENCIA_ADM_ESC\", \"TP_LOCALIZACAO_ESC\", \"TP_SIT_FUNC_ESC\", \"IN_BAIXA_VISAO\", \"IN_CEGUEIRA\", \"IN_SURDEZ\", \"IN_DEFICIENCIA_AUDITIVA\", \"IN_SURDO_CEGUEIRA\", \"IN_DEFICIENCIA_FISICA\", \"IN_DEFICIENCIA_MENTAL\", \"IN_DEFICIT_ATENCAO\", \"IN_DISLEXIA\", \"IN_DISCALCULIA\", \"IN_AUTISMO\", \"IN_VISAO_MONOCULAR\", \"IN_OUTRA_DEF\", \"IN_GESTANTE\", \"IN_LACTANTE\", \"IN_IDOSO\", \"IN_ESTUDA_CLASSE_HOSPITALAR\", \"IN_SEM_RECURSO\", \"IN_BRAILLE\", \"IN_AMPLIADA_24\", \"IN_AMPLIADA_18\", \"IN_LEDOR\", \"IN_ACESSO\", \"IN_TRANSCRICAO\", \"IN_LIBRAS\", \"IN_TEMPO_ADICIONAL\", \"IN_LEITURA_LABIAL\", \"IN_MESA_CADEIRA_RODAS\", \"IN_MESA_CADEIRA_SEPARADA\", \"IN_APOIO_PERNA\", \"IN_GUIA_INTERPRETE\", \"IN_COMPUTADOR\", \"IN_CADEIRA_ESPECIAL\", \"IN_CADEIRA_CANHOTO\", \"IN_CADEIRA_ACOLCHOADA\", \"IN_PROVA_DEITADO\", \"IN_MOBILIARIO_OBESO\", \"IN_LAMINA_OVERLAY\", \"IN_PROTETOR_AURICULAR\", \"IN_MEDIDOR_GLICOSE\", \"IN_MAQUINA_BRAILE\", \"IN_SOROBAN\", \"IN_MARCA_PASSO\", \"IN_SONDA\", \"IN_MEDICAMENTOS\", \"IN_SALA_INDIVIDUAL\", \"IN_SALA_ESPECIAL\", \"IN_SALA_ACOMPANHANTE\", \"IN_MOBILIARIO_ESPECIFICO\", \"IN_MATERIAL_ESPECIFICO\", \"IN_NOME_SOCIAL\", \"CO_MUNICIPIO_PROVA\", \"NO_MUNICIPIO_PROVA\", \"CO_UF_PROVA\", \"SG_UF_PROVA\", \"TP_PRESENCA_CN\", \"TP_PRESENCA_CH\", \"TP_PRESENCA_LC\", \"TP_PRESENCA_MT\", \"CO_PROVA_CN\", \"CO_PROVA_CH\", \"CO_PROVA_LC\", \"CO_PROVA_MT\", \"NU_NOTA_CN\", \"NU_NOTA_CH\", \"NU_NOTA_LC\", \"NU_NOTA_MT\", \"TX_RESPOSTAS_CN\", \"TX_RESPOSTAS_CH\", \"TX_RESPOSTAS_LC\", \"TX_RESPOSTAS_MT\", \"TP_LINGUA\", \"TX_GABARITO_CN\", \"TX_GABARITO_CH\", \"TX_GABARITO_LC\", \"TX_GABARITO_MT\", \"TP_STATUS_REDACAO\", \"NU_NOTA_COMP1\", \"NU_NOTA_COMP2\", \"NU_NOTA_COMP3\", \"NU_NOTA_COMP4\", \"NU_NOTA_COMP5\", \"NU_NOTA_REDACAO\", \"Q001\", \"Q002\", \"Q003\", \"Q004\", \"Q005\", \"Q006\", \"Q007\", \"Q008\", \"Q009\", \"Q010\", \"Q011\", \"Q012\", \"Q013\", \"Q014\", \"Q015\", \"Q016\", \"Q017\", \"Q018\", \"Q019\", \"Q020\", \"Q021\", \"Q022\", \"Q023\", \"Q024\", \"Q025\"}),",
+                "    #\"Colunas Renomeadas1\" = Table.RenameColumns(#\"Colunas Reordenadas\",{{\"TP_SEXO\", \"SEXO\"}, {\"TP_ESTADO_CIVIL\", \"ESTADO_CIVIL\"}}),",
+                "    #\"Tipo Alterado1\" = Table.TransformColumnTypes(#\"Colunas Renomeadas1\",{{\"ESTADO_CIVIL\", type text}}),",
+                "    #\"Valor Substituído\" = Table.ReplaceValue(#\"Tipo Alterado1\",\"0\",\"Não informado\",Replacer.ReplaceText,{\"ESTADO_CIVIL\"}),",
+                "    #\"Valor Substituído1\" = Table.ReplaceValue(#\"Valor Substituído\",\"1\",\"Solteiro(a)\",Replacer.ReplaceText,{\"ESTADO_CIVIL\"}),",
+                "    #\"Valor Substituído2\" = Table.ReplaceValue(#\"Valor Substituído1\",\"2\",\"Casado(a)/Mora com companheiro(a)\",Replacer.ReplaceText,{\"ESTADO_CIVIL\"}),",
+                "    #\"Valor Substituído3\" = Table.ReplaceValue(#\"Valor Substituído2\",\"3\",\"Divorciado(a)/Desquitado(a)/Separado(a)\",Replacer.ReplaceText,{\"ESTADO_CIVIL\"}),",
+                "    #\"Valor Substituído4\" = Table.ReplaceValue(#\"Valor Substituído3\",\"4\",\"Viúvo(a)\",Replacer.ReplaceText,{\"ESTADO_CIVIL\"}),",
+                "    #\"Tipo Alterado com Localidade\" = Table.TransformColumnTypes(#\"Valor Substituído4\", {{\"NU_NOTA_CN\", type number}}, \"en-US\"),",
+                "    #\"Tipo Alterado com Localidade1\" = Table.TransformColumnTypes(#\"Tipo Alterado com Localidade\", {{\"NU_NOTA_CH\", type number}, {\"NU_NOTA_LC\", type number}, {\"NU_NOTA_MT\", type number}}, \"en-US\"),",
+                "    #\"Dividir Coluna pela Posição\" = Table.SplitColumn(Table.TransformColumnTypes(#\"Tipo Alterado com Localidade1\", {{\"NU_NOTA_CN\", type text}}, \"pt-BR\"), \"NU_NOTA_CN\", Splitter.SplitTextByPositions({0, 3}, false), {\"NU_NOTA_CN.1\", \"NU_NOTA_CN.2\"}),",
+                "    #\"Tipo Alterado2\" = Table.TransformColumnTypes(#\"Dividir Coluna pela Posição\",{{\"NU_NOTA_CN.1\", Int64.Type}, {\"NU_NOTA_CN.2\", Int64.Type}}),",
+                "    #\"Valor Substituído5\" = Table.ReplaceValue(#\"Tipo Alterado2\",null,0,Replacer.ReplaceValue,{\"NU_NOTA_CN.1\"}),",
+                "    #\"Valor Substituído6\" = Table.ReplaceValue(#\"Valor Substituído5\",null,0,Replacer.ReplaceValue,{\"NU_NOTA_CN.2\"}),",
+                "    #\"Colunas Mescladas\" = Table.CombineColumns(Table.TransformColumnTypes(#\"Valor Substituído6\", {{\"NU_NOTA_CN.1\", type text}, {\"NU_NOTA_CN.2\", type text}}, \"pt-BR\"),{\"NU_NOTA_CN.1\", \"NU_NOTA_CN.2\"},Combiner.CombineTextByDelimiter(\".\", QuoteStyle.None),\"NOTA_CN\"),",
+                "    #\"Tipo Alterado com Localidade2\" = Table.TransformColumnTypes(#\"Colunas Mescladas\", {{\"NOTA_CN\", type number}}, \"en-US\"),",
+                "    #\"Dividir Coluna pela Posição1\" = Table.SplitColumn(Table.TransformColumnTypes(#\"Tipo Alterado com Localidade2\", {{\"NU_NOTA_LC\", type text}}, \"pt-BR\"), \"NU_NOTA_LC\", Splitter.SplitTextByPositions({0, 3}, false), {\"NU_NOTA_LC.1\", \"NU_NOTA_LC.2\"}),",
+                "    #\"Tipo Alterado3\" = Table.TransformColumnTypes(#\"Dividir Coluna pela Posição1\",{{\"NU_NOTA_LC.1\", Int64.Type}, {\"NU_NOTA_LC.2\", Int64.Type}}),",
+                "    #\"Valor Substituído7\" = Table.ReplaceValue(#\"Tipo Alterado3\",null,0,Replacer.ReplaceValue,{\"NU_NOTA_LC.1\"}),",
+                "    #\"Valor Substituído8\" = Table.ReplaceValue(#\"Valor Substituído7\",null,0,Replacer.ReplaceValue,{\"NU_NOTA_LC.2\"}),",
+                "    #\"Colunas Mescladas1\" = Table.CombineColumns(Table.TransformColumnTypes(#\"Valor Substituído8\", {{\"NU_NOTA_LC.1\", type text}, {\"NU_NOTA_LC.2\", type text}}, \"pt-BR\"),{\"NU_NOTA_LC.1\", \"NU_NOTA_LC.2\"},Combiner.CombineTextByDelimiter(\".\", QuoteStyle.None),\"NOTA_LC\"),",
+                "    #\"Tipo Alterado com Localidade3\" = Table.TransformColumnTypes(#\"Colunas Mescladas1\", {{\"NOTA_LC\", type number}}, \"en-US\"),",
+                "    #\"Dividir Coluna pela Posição2\" = Table.SplitColumn(Table.TransformColumnTypes(#\"Tipo Alterado com Localidade3\", {{\"NU_NOTA_CH\", type text}}, \"pt-BR\"), \"NU_NOTA_CH\", Splitter.SplitTextByPositions({0, 3}, false), {\"NU_NOTA_CH.1\", \"NU_NOTA_CH.2\"}),",
+                "    #\"Tipo Alterado4\" = Table.TransformColumnTypes(#\"Dividir Coluna pela Posição2\",{{\"NU_NOTA_CH.1\", Int64.Type}, {\"NU_NOTA_CH.2\", Int64.Type}}),",
+                "    #\"Valor Substituído9\" = Table.ReplaceValue(#\"Tipo Alterado4\",null,0,Replacer.ReplaceValue,{\"NU_NOTA_CH.1\"}),",
+                "    #\"Valor Substituído10\" = Table.ReplaceValue(#\"Valor Substituído9\",null,0,Replacer.ReplaceValue,{\"NU_NOTA_CH.2\"}),",
+                "    #\"Colunas Mescladas2\" = Table.CombineColumns(Table.TransformColumnTypes(#\"Valor Substituído10\", {{\"NU_NOTA_CH.1\", type text}, {\"NU_NOTA_CH.2\", type text}}, \"pt-BR\"),{\"NU_NOTA_CH.1\", \"NU_NOTA_CH.2\"},Combiner.CombineTextByDelimiter(\".\", QuoteStyle.None),\"NOTA_CH\"),",
+                "    #\"Tipo Alterado com Localidade4\" = Table.TransformColumnTypes(#\"Colunas Mescladas2\", {{\"NOTA_CH\", type number}}, \"en-US\"),",
+                "    #\"Dividir Coluna pela Posição3\" = Table.SplitColumn(Table.TransformColumnTypes(#\"Tipo Alterado com Localidade4\", {{\"NU_NOTA_MT\", type text}}, \"pt-BR\"), \"NU_NOTA_MT\", Splitter.SplitTextByPositions({0, 3}, false), {\"NU_NOTA_MT.1\", \"NU_NOTA_MT.2\"}),",
+                "    #\"Tipo Alterado5\" = Table.TransformColumnTypes(#\"Dividir Coluna pela Posição3\",{{\"NU_NOTA_MT.1\", Int64.Type}, {\"NU_NOTA_MT.2\", Int64.Type}}),",
+                "    #\"Valor Substituído11\" = Table.ReplaceValue(#\"Tipo Alterado5\",null,0,Replacer.ReplaceValue,{\"NU_NOTA_MT.1\"}),",
+                "    #\"Valor Substituído12\" = Table.ReplaceValue(#\"Valor Substituído11\",null,0,Replacer.ReplaceValue,{\"NU_NOTA_MT.2\"}),",
+                "    #\"Colunas Mescladas3\" = Table.CombineColumns(Table.TransformColumnTypes(#\"Valor Substituído12\", {{\"NU_NOTA_MT.1\", type text}, {\"NU_NOTA_MT.2\", type text}}, \"pt-BR\"),{\"NU_NOTA_MT.1\", \"NU_NOTA_MT.2\"},Combiner.CombineTextByDelimiter(\".\", QuoteStyle.None),\"NOTA_MT\"),",
+                "    #\"Tipo Alterado com Localidade5\" = Table.TransformColumnTypes(#\"Colunas Mescladas3\", {{\"NOTA_MT\", type number}}, \"en-US\"),",
+                "    #\"Colunas Renomeadas2\" = Table.RenameColumns(#\"Tipo Alterado com Localidade5\",{{\"NU_ANO\", \"ANO\"}}),",
+                "    #\"Outras Colunas Removidas\" = Table.SelectColumns(#\"Colunas Renomeadas2\",{\"INSCRICAO\", \"ANO\", \"CO_MUNICIPIO_RESIDENCIA\", \"MUNICIPIO_RESIDENCIA\", \"CO_UF_RESIDENCIA\", \"SG_UF_RESIDENCIA\", \"NU_IDADE\", \"FAIXA_ETARIA\", \"SEXO\", \"ESTADO_CIVIL\", \"TP_COR_RACA\", \"TP_NACIONALIDADE\", \"CO_MUNICIPIO_NASCIMENTO\", \"NO_MUNICIPIO_NASCIMENTO\", \"CO_UF_NASCIMENTO\", \"SG_UF_NASCIMENTO\", \"TP_ST_CONCLUSAO\", \"TP_ANO_CONCLUIU\", \"TP_ESCOLA\", \"TP_ENSINO\", \"IN_TREINEIRO\", \"CO_ESCOLA\", \"CO_MUNICIPIO_ESC\", \"NO_MUNICIPIO_ESC\", \"CO_UF_ESC\", \"SG_UF_ESC\", \"TP_DEPENDENCIA_ADM_ESC\", \"TP_LOCALIZACAO_ESC\", \"TP_SIT_FUNC_ESC\", \"IN_BAIXA_VISAO\", \"IN_CEGUEIRA\", \"IN_SURDEZ\", \"IN_DEFICIENCIA_AUDITIVA\", \"IN_SURDO_CEGUEIRA\", \"IN_DEFICIENCIA_FISICA\", \"IN_DEFICIENCIA_MENTAL\", \"IN_DEFICIT_ATENCAO\", \"IN_DISLEXIA\", \"IN_DISCALCULIA\", \"IN_AUTISMO\", \"IN_VISAO_MONOCULAR\", \"IN_OUTRA_DEF\", \"IN_GESTANTE\", \"IN_LACTANTE\", \"IN_IDOSO\", \"IN_ESTUDA_CLASSE_HOSPITALAR\", \"IN_SEM_RECURSO\", \"IN_BRAILLE\", \"IN_AMPLIADA_24\", \"IN_AMPLIADA_18\", \"IN_LEDOR\", \"IN_ACESSO\", \"IN_TRANSCRICAO\", \"IN_LIBRAS\", \"IN_TEMPO_ADICIONAL\", \"IN_LEITURA_LABIAL\", \"IN_MESA_CADEIRA_RODAS\", \"IN_MESA_CADEIRA_SEPARADA\", \"IN_APOIO_PERNA\", \"IN_GUIA_INTERPRETE\", \"IN_COMPUTADOR\", \"IN_CADEIRA_ESPECIAL\", \"IN_CADEIRA_CANHOTO\", \"IN_CADEIRA_ACOLCHOADA\", \"IN_PROVA_DEITADO\", \"IN_MOBILIARIO_OBESO\", \"IN_LAMINA_OVERLAY\", \"IN_PROTETOR_AURICULAR\", \"IN_MEDIDOR_GLICOSE\", \"IN_MAQUINA_BRAILE\", \"IN_SOROBAN\", \"IN_MARCA_PASSO\", \"IN_SONDA\", \"IN_MEDICAMENTOS\", \"IN_SALA_INDIVIDUAL\", \"IN_SALA_ESPECIAL\", \"IN_SALA_ACOMPANHANTE\", \"IN_MOBILIARIO_ESPECIFICO\", \"IN_MATERIAL_ESPECIFICO\", \"IN_NOME_SOCIAL\", \"CO_MUNICIPIO_PROVA\", \"NO_MUNICIPIO_PROVA\", \"CO_UF_PROVA\", \"SG_UF_PROVA\", \"TP_PRESENCA_CN\", \"TP_PRESENCA_CH\", \"TP_PRESENCA_LC\", \"TP_PRESENCA_MT\", \"CO_PROVA_CN\", \"CO_PROVA_CH\", \"CO_PROVA_LC\", \"CO_PROVA_MT\", \"NOTA_CN\", \"NOTA_CH\", \"NOTA_LC\", \"NOTA_MT\", \"TP_LINGUA\", \"TP_STATUS_REDACAO\", \"NU_NOTA_COMP1\", \"NU_NOTA_COMP2\", \"NU_NOTA_COMP3\", \"NU_NOTA_COMP4\", \"NU_NOTA_COMP5\", \"NU_NOTA_REDACAO\", \"Q001\", \"Q002\", \"Q003\", \"Q004\", \"Q005\", \"Q006\", \"Q007\", \"Q008\", \"Q009\", \"Q010\", \"Q011\", \"Q012\", \"Q013\", \"Q014\", \"Q015\", \"Q016\", \"Q017\", \"Q018\", \"Q019\", \"Q020\", \"Q021\", \"Q022\", \"Q023\", \"Q024\", \"Q025\"}),",
+                "    #\"Colunas Renomeadas3\" = Table.RenameColumns(#\"Outras Colunas Removidas\",{{\"Q001\", \"Q1_ESTUO_PAI\"}, {\"Q002\", \"Q2_ESTUDO_MAE\"}, {\"Q003\", \"Q3_OCUP_PAI\"}, {\"Q004\", \"Q4_OCUP_MAE\"}, {\"Q005\", \"Q5_QTD_PESS_RES\"}, {\"Q006\", \"Q6_RENDA\"}, {\"Q007\", \"Q7_EMP_DOMES\"}, {\"Q008\", \"Q8_BANHEIRO\"}, {\"Q009\", \"Q9_QUARTO\"}, {\"Q010\", \"Q10_CARRO\"}, {\"Q011\", \"Q11_MOTO\"}, {\"Q012\", \"Q12_GELADEIRA\"}, {\"Q013\", \"Q13_FREEZER\"}, {\"Q014\", \"Q14_MQ_LV_ROUPA\"}, {\"Q015\", \"Q15_MQ_SC_ROUPA\"}, {\"Q016\", \"Q16_FORNO\"}, {\"Q017\", \"Q17_LV_LOUCA\"}, {\"Q018\", \"Q18_ASP_PO\"}, {\"Q019\", \"Q19_TV_CORES\"}, {\"Q020\", \"Q20_DVD\"}, {\"Q021\", \"Q21_TV_ASS\"}, {\"Q022\", \"Q22_CELULAR\"}, {\"Q023\", \"Q23_TEL_FIXO\"}, {\"Q024\", \"Q24_COMPUTADOR\"}, {\"Q025\", \"Q25_INTERNET\"}})",
+                "in",
+                "    #\"Colunas Renomeadas3\""
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "annotations": [
+      {
+        "name": "ClientCompatibilityLevel",
+        "value": "600"
+      }
+    ]
+  }
+}
