@@ -1,0 +1,30 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "enemdf"
+		},
+		"AzureSqlDatabaseCopyData_connectionString": {
+			"value": ""
+		},
+		"AzureDataLakeStore1_properties_typeProperties_dataLakeStoreUri": {
+			"value": "https://enemdatallake.azuredatalakestore.net/webhdfs/v1"
+		},
+		"AzureDataLakeStore1_properties_typeProperties_tenant": {
+			"value": "f41187ea-9d6b-43e7-8b3b-e56af6487b0a"
+		},
+		"AzureDataLakeStore1_properties_typeProperties_subscriptionId": {
+			"value": "f255c71b-6c02-40b2-8f11-0e18e06d54ad"
+		},
+		"AzureDataLakeStore1_properties_typeProperties_resourceGroupName": {
+			"value": "tcc"
+		},
+		"AzureSqlDatabase1_properties_privateLinkResourceId": {
+			"value": "/subscriptions/0320f0a6-da31-4542-aaff-50197885bc1a/resourceGroups/enem_rg/providers/Microsoft.Sql/servers/enemrdb"
+		},
+		"AzureSqlDatabase1_properties_groupId": {
+			"value": "sqlServer"
+		}
+	}
+}
