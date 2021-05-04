@@ -4,7 +4,7 @@
 		"description": "Copy data from datalake storage gen1 to Azure SQL database.",
 		"activities": [
 			{
-				"name": "Copy_0oj",
+				"name": "Copy_Data",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -27,6 +27,12 @@
 				"typeProperties": {
 					"source": {
 						"type": "DelimitedTextSource",
+						"additionalColumns": [
+							{
+								"name": "",
+								"value": "$$FILEPATH"
+							}
+						],
 						"storeSettings": {
 							"type": "AzureDataLakeStoreReadSettings",
 							"recursive": true,
@@ -37,20 +43,14 @@
 							"skipLineCount": 0
 						}
 					},
-					"sink": {
-						"type": "AzureSqlSink",
-						"tableOption": "autoCreate"
-					},
 					"enableStaging": false,
-					"validateDataConsistency": false,
 					"translator": {
 						"type": "TabularTranslator",
 						"mappings": [
 							{
 								"source": {
 									"name": "NU_INSCRICAO",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "NU_INSCRICAO",
@@ -60,8 +60,7 @@
 							{
 								"source": {
 									"name": "NU_ANO",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "NU_ANO",
@@ -71,8 +70,7 @@
 							{
 								"source": {
 									"name": "CO_MUNICIPIO_RESIDENCIA",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "CO_MUNICIPIO_RESIDENCIA",
@@ -82,8 +80,7 @@
 							{
 								"source": {
 									"name": "NO_MUNICIPIO_RESIDENCIA",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "NO_MUNICIPIO_RESIDENCIA",
@@ -93,8 +90,7 @@
 							{
 								"source": {
 									"name": "CO_UF_RESIDENCIA",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "CO_UF_RESIDENCIA",
@@ -104,8 +100,7 @@
 							{
 								"source": {
 									"name": "SG_UF_RESIDENCIA",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "SG_UF_RESIDENCIA",
@@ -115,8 +110,7 @@
 							{
 								"source": {
 									"name": "NU_IDADE",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "NU_IDADE",
@@ -126,8 +120,7 @@
 							{
 								"source": {
 									"name": "TP_SEXO",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "TP_SEXO",
@@ -137,8 +130,7 @@
 							{
 								"source": {
 									"name": "TP_ESTADO_CIVIL",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "TP_ESTADO_CIVIL",
@@ -148,8 +140,7 @@
 							{
 								"source": {
 									"name": "TP_COR_RACA",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "TP_COR_RACA",
@@ -159,8 +150,7 @@
 							{
 								"source": {
 									"name": "TP_NACIONALIDADE",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "TP_NACIONALIDADE",
@@ -170,8 +160,7 @@
 							{
 								"source": {
 									"name": "CO_MUNICIPIO_NASCIMENTO",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "CO_MUNICIPIO_NASCIMENTO",
@@ -181,8 +170,7 @@
 							{
 								"source": {
 									"name": "NO_MUNICIPIO_NASCIMENTO",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "NO_MUNICIPIO_NASCIMENTO",
@@ -192,8 +180,7 @@
 							{
 								"source": {
 									"name": "CO_UF_NASCIMENTO",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "CO_UF_NASCIMENTO",
@@ -203,8 +190,7 @@
 							{
 								"source": {
 									"name": "SG_UF_NASCIMENTO",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "SG_UF_NASCIMENTO",
@@ -214,8 +200,7 @@
 							{
 								"source": {
 									"name": "TP_ST_CONCLUSAO",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "TP_ST_CONCLUSAO",
@@ -225,8 +210,7 @@
 							{
 								"source": {
 									"name": "TP_ANO_CONCLUIU",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "TP_ANO_CONCLUIU",
@@ -236,8 +220,7 @@
 							{
 								"source": {
 									"name": "TP_ESCOLA",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "TP_ESCOLA",
@@ -247,8 +230,7 @@
 							{
 								"source": {
 									"name": "TP_ENSINO",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "TP_ENSINO",
@@ -258,8 +240,7 @@
 							{
 								"source": {
 									"name": "IN_TREINEIRO",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "IN_TREINEIRO",
@@ -269,8 +250,7 @@
 							{
 								"source": {
 									"name": "CO_ESCOLA",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "CO_ESCOLA",
@@ -280,8 +260,7 @@
 							{
 								"source": {
 									"name": "CO_MUNICIPIO_ESC",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "CO_MUNICIPIO_ESC",
@@ -291,8 +270,7 @@
 							{
 								"source": {
 									"name": "NO_MUNICIPIO_ESC",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "NO_MUNICIPIO_ESC",
@@ -302,8 +280,7 @@
 							{
 								"source": {
 									"name": "CO_UF_ESC",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "CO_UF_ESC",
@@ -313,8 +290,7 @@
 							{
 								"source": {
 									"name": "SG_UF_ESC",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "SG_UF_ESC",
@@ -324,8 +300,7 @@
 							{
 								"source": {
 									"name": "TP_DEPENDENCIA_ADM_ESC",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "TP_DEPENDENCIA_ADM_ESC",
@@ -335,8 +310,7 @@
 							{
 								"source": {
 									"name": "TP_LOCALIZACAO_ESC",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "TP_LOCALIZACAO_ESC",
@@ -346,8 +320,7 @@
 							{
 								"source": {
 									"name": "TP_SIT_FUNC_ESC",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "TP_SIT_FUNC_ESC",
@@ -357,8 +330,7 @@
 							{
 								"source": {
 									"name": "IN_BAIXA_VISAO",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "IN_BAIXA_VISAO",
@@ -368,8 +340,7 @@
 							{
 								"source": {
 									"name": "IN_CEGUEIRA",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "IN_CEGUEIRA",
@@ -379,8 +350,7 @@
 							{
 								"source": {
 									"name": "IN_SURDEZ",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "IN_SURDEZ",
@@ -390,8 +360,7 @@
 							{
 								"source": {
 									"name": "IN_DEFICIENCIA_AUDITIVA",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "IN_DEFICIENCIA_AUDITIVA",
@@ -401,8 +370,7 @@
 							{
 								"source": {
 									"name": "IN_SURDO_CEGUEIRA",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "IN_SURDO_CEGUEIRA",
@@ -412,8 +380,7 @@
 							{
 								"source": {
 									"name": "IN_DEFICIENCIA_FISICA",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "IN_DEFICIENCIA_FISICA",
@@ -423,8 +390,7 @@
 							{
 								"source": {
 									"name": "IN_DEFICIENCIA_MENTAL",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "IN_DEFICIENCIA_MENTAL",
@@ -434,8 +400,7 @@
 							{
 								"source": {
 									"name": "IN_DEFICIT_ATENCAO",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "IN_DEFICIT_ATENCAO",
@@ -445,8 +410,7 @@
 							{
 								"source": {
 									"name": "IN_DISLEXIA",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "IN_DISLEXIA",
@@ -456,8 +420,7 @@
 							{
 								"source": {
 									"name": "IN_DISCALCULIA",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "IN_DISCALCULIA",
@@ -467,8 +430,7 @@
 							{
 								"source": {
 									"name": "IN_AUTISMO",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "IN_AUTISMO",
@@ -478,8 +440,7 @@
 							{
 								"source": {
 									"name": "IN_VISAO_MONOCULAR",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "IN_VISAO_MONOCULAR",
@@ -489,8 +450,7 @@
 							{
 								"source": {
 									"name": "IN_OUTRA_DEF",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "IN_OUTRA_DEF",
@@ -500,8 +460,7 @@
 							{
 								"source": {
 									"name": "IN_GESTANTE",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "IN_GESTANTE",
@@ -511,8 +470,7 @@
 							{
 								"source": {
 									"name": "IN_LACTANTE",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "IN_LACTANTE",
@@ -522,8 +480,7 @@
 							{
 								"source": {
 									"name": "IN_IDOSO",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "IN_IDOSO",
@@ -533,8 +490,7 @@
 							{
 								"source": {
 									"name": "IN_ESTUDA_CLASSE_HOSPITALAR",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "IN_ESTUDA_CLASSE_HOSPITALAR",
@@ -544,8 +500,7 @@
 							{
 								"source": {
 									"name": "IN_SEM_RECURSO",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "IN_SEM_RECURSO",
@@ -555,8 +510,7 @@
 							{
 								"source": {
 									"name": "IN_BRAILLE",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "IN_BRAILLE",
@@ -566,8 +520,7 @@
 							{
 								"source": {
 									"name": "IN_AMPLIADA_24",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "IN_AMPLIADA_24",
@@ -577,8 +530,7 @@
 							{
 								"source": {
 									"name": "IN_AMPLIADA_18",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "IN_AMPLIADA_18",
@@ -588,8 +540,7 @@
 							{
 								"source": {
 									"name": "IN_LEDOR",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "IN_LEDOR",
@@ -599,8 +550,7 @@
 							{
 								"source": {
 									"name": "IN_ACESSO",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "IN_ACESSO",
@@ -610,8 +560,7 @@
 							{
 								"source": {
 									"name": "IN_TRANSCRICAO",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "IN_TRANSCRICAO",
@@ -621,8 +570,7 @@
 							{
 								"source": {
 									"name": "IN_LIBRAS",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "IN_LIBRAS",
@@ -632,8 +580,7 @@
 							{
 								"source": {
 									"name": "IN_TEMPO_ADICIONAL",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "IN_TEMPO_ADICIONAL",
@@ -643,8 +590,7 @@
 							{
 								"source": {
 									"name": "IN_LEITURA_LABIAL",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "IN_LEITURA_LABIAL",
@@ -654,8 +600,7 @@
 							{
 								"source": {
 									"name": "IN_MESA_CADEIRA_RODAS",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "IN_MESA_CADEIRA_RODAS",
@@ -665,8 +610,7 @@
 							{
 								"source": {
 									"name": "IN_MESA_CADEIRA_SEPARADA",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "IN_MESA_CADEIRA_SEPARADA",
@@ -676,8 +620,7 @@
 							{
 								"source": {
 									"name": "IN_APOIO_PERNA",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "IN_APOIO_PERNA",
@@ -687,8 +630,7 @@
 							{
 								"source": {
 									"name": "IN_GUIA_INTERPRETE",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "IN_GUIA_INTERPRETE",
@@ -698,8 +640,7 @@
 							{
 								"source": {
 									"name": "IN_COMPUTADOR",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "IN_COMPUTADOR",
@@ -709,8 +650,7 @@
 							{
 								"source": {
 									"name": "IN_CADEIRA_ESPECIAL",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "IN_CADEIRA_ESPECIAL",
@@ -720,8 +660,7 @@
 							{
 								"source": {
 									"name": "IN_CADEIRA_CANHOTO",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "IN_CADEIRA_CANHOTO",
@@ -731,8 +670,7 @@
 							{
 								"source": {
 									"name": "IN_CADEIRA_ACOLCHOADA",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "IN_CADEIRA_ACOLCHOADA",
@@ -742,8 +680,7 @@
 							{
 								"source": {
 									"name": "IN_PROVA_DEITADO",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "IN_PROVA_DEITADO",
@@ -753,8 +690,7 @@
 							{
 								"source": {
 									"name": "IN_MOBILIARIO_OBESO",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "IN_MOBILIARIO_OBESO",
@@ -764,8 +700,7 @@
 							{
 								"source": {
 									"name": "IN_LAMINA_OVERLAY",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "IN_LAMINA_OVERLAY",
@@ -775,8 +710,7 @@
 							{
 								"source": {
 									"name": "IN_PROTETOR_AURICULAR",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "IN_PROTETOR_AURICULAR",
@@ -786,8 +720,7 @@
 							{
 								"source": {
 									"name": "IN_MEDIDOR_GLICOSE",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "IN_MEDIDOR_GLICOSE",
@@ -797,8 +730,7 @@
 							{
 								"source": {
 									"name": "IN_MAQUINA_BRAILE",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "IN_MAQUINA_BRAILE",
@@ -808,8 +740,7 @@
 							{
 								"source": {
 									"name": "IN_SOROBAN",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "IN_SOROBAN",
@@ -819,8 +750,7 @@
 							{
 								"source": {
 									"name": "IN_MARCA_PASSO",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "IN_MARCA_PASSO",
@@ -830,8 +760,7 @@
 							{
 								"source": {
 									"name": "IN_SONDA",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "IN_SONDA",
@@ -841,8 +770,7 @@
 							{
 								"source": {
 									"name": "IN_MEDICAMENTOS",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "IN_MEDICAMENTOS",
@@ -852,8 +780,7 @@
 							{
 								"source": {
 									"name": "IN_SALA_INDIVIDUAL",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "IN_SALA_INDIVIDUAL",
@@ -863,8 +790,7 @@
 							{
 								"source": {
 									"name": "IN_SALA_ESPECIAL",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "IN_SALA_ESPECIAL",
@@ -874,8 +800,7 @@
 							{
 								"source": {
 									"name": "IN_SALA_ACOMPANHANTE",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "IN_SALA_ACOMPANHANTE",
@@ -885,8 +810,7 @@
 							{
 								"source": {
 									"name": "IN_MOBILIARIO_ESPECIFICO",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "IN_MOBILIARIO_ESPECIFICO",
@@ -896,8 +820,7 @@
 							{
 								"source": {
 									"name": "IN_MATERIAL_ESPECIFICO",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "IN_MATERIAL_ESPECIFICO",
@@ -907,8 +830,7 @@
 							{
 								"source": {
 									"name": "IN_NOME_SOCIAL",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "IN_NOME_SOCIAL",
@@ -918,8 +840,7 @@
 							{
 								"source": {
 									"name": "CO_MUNICIPIO_PROVA",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "CO_MUNICIPIO_PROVA",
@@ -929,8 +850,7 @@
 							{
 								"source": {
 									"name": "NO_MUNICIPIO_PROVA",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "NO_MUNICIPIO_PROVA",
@@ -940,8 +860,7 @@
 							{
 								"source": {
 									"name": "CO_UF_PROVA",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "CO_UF_PROVA",
@@ -951,8 +870,7 @@
 							{
 								"source": {
 									"name": "SG_UF_PROVA",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "SG_UF_PROVA",
@@ -962,8 +880,7 @@
 							{
 								"source": {
 									"name": "TP_PRESENCA_CN",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "TP_PRESENCA_CN",
@@ -973,8 +890,7 @@
 							{
 								"source": {
 									"name": "TP_PRESENCA_CH",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "TP_PRESENCA_CH",
@@ -984,8 +900,7 @@
 							{
 								"source": {
 									"name": "TP_PRESENCA_LC",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "TP_PRESENCA_LC",
@@ -995,8 +910,7 @@
 							{
 								"source": {
 									"name": "TP_PRESENCA_MT",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "TP_PRESENCA_MT",
@@ -1006,8 +920,7 @@
 							{
 								"source": {
 									"name": "CO_PROVA_CN",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "CO_PROVA_CN",
@@ -1017,8 +930,7 @@
 							{
 								"source": {
 									"name": "CO_PROVA_CH",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "CO_PROVA_CH",
@@ -1028,8 +940,7 @@
 							{
 								"source": {
 									"name": "CO_PROVA_LC",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "CO_PROVA_LC",
@@ -1039,8 +950,7 @@
 							{
 								"source": {
 									"name": "CO_PROVA_MT",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "CO_PROVA_MT",
@@ -1050,8 +960,7 @@
 							{
 								"source": {
 									"name": "NU_NOTA_CN",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "NU_NOTA_CN",
@@ -1061,8 +970,7 @@
 							{
 								"source": {
 									"name": "NU_NOTA_CH",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "NU_NOTA_CH",
@@ -1072,8 +980,7 @@
 							{
 								"source": {
 									"name": "NU_NOTA_LC",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "NU_NOTA_LC",
@@ -1083,8 +990,7 @@
 							{
 								"source": {
 									"name": "NU_NOTA_MT",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "NU_NOTA_MT",
@@ -1094,8 +1000,7 @@
 							{
 								"source": {
 									"name": "TX_RESPOSTAS_CN",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "TX_RESPOSTAS_CN",
@@ -1105,8 +1010,7 @@
 							{
 								"source": {
 									"name": "TX_RESPOSTAS_CH",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "TX_RESPOSTAS_CH",
@@ -1116,8 +1020,7 @@
 							{
 								"source": {
 									"name": "TX_RESPOSTAS_LC",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "TX_RESPOSTAS_LC",
@@ -1127,8 +1030,7 @@
 							{
 								"source": {
 									"name": "TX_RESPOSTAS_MT",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "TX_RESPOSTAS_MT",
@@ -1138,8 +1040,7 @@
 							{
 								"source": {
 									"name": "TP_LINGUA",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "TP_LINGUA",
@@ -1149,8 +1050,7 @@
 							{
 								"source": {
 									"name": "TX_GABARITO_CN",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "TX_GABARITO_CN",
@@ -1160,8 +1060,7 @@
 							{
 								"source": {
 									"name": "TX_GABARITO_CH",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "TX_GABARITO_CH",
@@ -1171,8 +1070,7 @@
 							{
 								"source": {
 									"name": "TX_GABARITO_LC",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "TX_GABARITO_LC",
@@ -1182,8 +1080,7 @@
 							{
 								"source": {
 									"name": "TX_GABARITO_MT",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "TX_GABARITO_MT",
@@ -1193,8 +1090,7 @@
 							{
 								"source": {
 									"name": "TP_STATUS_REDACAO",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "TP_STATUS_REDACAO",
@@ -1204,8 +1100,7 @@
 							{
 								"source": {
 									"name": "NU_NOTA_COMP1",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "NU_NOTA_COMP1",
@@ -1215,8 +1110,7 @@
 							{
 								"source": {
 									"name": "NU_NOTA_COMP2",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "NU_NOTA_COMP2",
@@ -1226,8 +1120,7 @@
 							{
 								"source": {
 									"name": "NU_NOTA_COMP3",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "NU_NOTA_COMP3",
@@ -1237,8 +1130,7 @@
 							{
 								"source": {
 									"name": "NU_NOTA_COMP4",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "NU_NOTA_COMP4",
@@ -1248,8 +1140,7 @@
 							{
 								"source": {
 									"name": "NU_NOTA_COMP5",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "NU_NOTA_COMP5",
@@ -1259,8 +1150,7 @@
 							{
 								"source": {
 									"name": "NU_NOTA_REDACAO",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "NU_NOTA_REDACAO",
@@ -1270,8 +1160,7 @@
 							{
 								"source": {
 									"name": "Q001",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "Q001",
@@ -1281,8 +1170,7 @@
 							{
 								"source": {
 									"name": "Q002",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "Q002",
@@ -1292,8 +1180,7 @@
 							{
 								"source": {
 									"name": "Q003",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "Q003",
@@ -1303,8 +1190,7 @@
 							{
 								"source": {
 									"name": "Q004",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "Q004",
@@ -1314,8 +1200,7 @@
 							{
 								"source": {
 									"name": "Q005",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "Q005",
@@ -1325,8 +1210,7 @@
 							{
 								"source": {
 									"name": "Q006",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "Q006",
@@ -1336,8 +1220,7 @@
 							{
 								"source": {
 									"name": "Q007",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "Q007",
@@ -1347,8 +1230,7 @@
 							{
 								"source": {
 									"name": "Q008",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "Q008",
@@ -1358,8 +1240,7 @@
 							{
 								"source": {
 									"name": "Q009",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "Q009",
@@ -1369,8 +1250,7 @@
 							{
 								"source": {
 									"name": "Q010",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "Q010",
@@ -1380,8 +1260,7 @@
 							{
 								"source": {
 									"name": "Q011",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "Q011",
@@ -1391,8 +1270,7 @@
 							{
 								"source": {
 									"name": "Q012",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "Q012",
@@ -1402,8 +1280,7 @@
 							{
 								"source": {
 									"name": "Q013",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "Q013",
@@ -1413,8 +1290,7 @@
 							{
 								"source": {
 									"name": "Q014",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "Q014",
@@ -1424,8 +1300,7 @@
 							{
 								"source": {
 									"name": "Q015",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "Q015",
@@ -1435,8 +1310,7 @@
 							{
 								"source": {
 									"name": "Q016",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "Q016",
@@ -1446,8 +1320,7 @@
 							{
 								"source": {
 									"name": "Q017",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "Q017",
@@ -1457,8 +1330,7 @@
 							{
 								"source": {
 									"name": "Q018",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "Q018",
@@ -1468,8 +1340,7 @@
 							{
 								"source": {
 									"name": "Q019",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "Q019",
@@ -1479,8 +1350,7 @@
 							{
 								"source": {
 									"name": "Q020",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "Q020",
@@ -1490,8 +1360,7 @@
 							{
 								"source": {
 									"name": "Q021",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "Q021",
@@ -1501,8 +1370,7 @@
 							{
 								"source": {
 									"name": "Q022",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "Q022",
@@ -1512,8 +1380,7 @@
 							{
 								"source": {
 									"name": "Q023",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "Q023",
@@ -1523,8 +1390,7 @@
 							{
 								"source": {
 									"name": "Q024",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "Q024",
@@ -1534,31 +1400,19 @@
 							{
 								"source": {
 									"name": "Q025",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "Q025",
 									"type": "String"
 								}
 							}
-						],
-						"typeConversion": true,
-						"typeConversionSettings": {
-							"allowDataTruncation": true,
-							"treatBooleanAsNumber": false
-						}
+						]
 					}
 				},
 				"inputs": [
 					{
-						"referenceName": "SourceDataset_0oj",
-						"type": "DatasetReference"
-					}
-				],
-				"outputs": [
-					{
-						"referenceName": "DestinationDataset_0oj",
+						"referenceName": "DelimitedText1",
 						"type": "DatasetReference"
 					}
 				]
