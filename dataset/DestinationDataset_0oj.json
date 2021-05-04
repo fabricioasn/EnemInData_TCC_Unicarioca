@@ -9,7 +9,7 @@
 		"type": "AzureSqlTable",
 		"schema": [],
 		"typeProperties": {
-			"table": "Azure Data Lake Storage Gen1 arquivo"
+			"table": ""
 		}
 	}
 }
