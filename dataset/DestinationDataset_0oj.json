@@ -1,0 +1,15 @@
+{
+	"name": "DestinationDataset_0oj",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabaseCopyData",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"table": "Azure Data Lake Storage Gen1 arquivo"
+		}
+	}
+}
