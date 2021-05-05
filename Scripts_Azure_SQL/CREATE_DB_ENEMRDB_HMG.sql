@@ -136,3 +136,18 @@ CREATE TABLE [dbo].[Enem_Table]
 [  Q023  ] VARCHAR(150)  ,	
 [  Q024  ] VARCHAR(150)  	
 );
+
+--SELECT TEST
+/*
+SELECT [  NU_INSCRICAO	],	
+[  NU_ANO	],	
+[  CO_MUNICIPIO_RESIDENCIA	],	
+[  NO_MUNICIPIO_RESIDENCIA	],
+[  CO_UF_RESIDENCIA	],	
+[  SG_UF_RESIDENCIA	],	
+[  NU_IDADE	],	
+[  TP_SEXO	],	
+[  TP_ESTADO_CIVIL	],	
+[  TP_COR_RACA	],
+FROM [dbo].[Enem_Table]
+*/
