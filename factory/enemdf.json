@@ -1,0 +1,9 @@
+{
+	"name": "enemdf",
+	"location": "southcentralus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "774373bb-75b1-4076-83c0-768e4cefb8ae",
+		"tenantId": "f41187ea-9d6b-43e7-8b3b-e56af6487b0a"
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"name": "AzureDataLakeStore1",
+	"properties": {
+		"annotations": [],
+		"type": "AzureDataLakeStore",
+		"typeProperties": {
+			"dataLakeStoreUri": "https://enemdatallake.azuredatalakestore.net/webhdfs/v1",
+			"tenant": "f41187ea-9d6b-43e7-8b3b-e56af6487b0a",
+			"subscriptionId": "f255c71b-6c02-40b2-8f11-0e18e06d54ad",
+			"resourceGroupName": "tcc"
+		},
+		"connectVia": {
+			"referenceName": "AutoResolveIntegrationRuntime",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

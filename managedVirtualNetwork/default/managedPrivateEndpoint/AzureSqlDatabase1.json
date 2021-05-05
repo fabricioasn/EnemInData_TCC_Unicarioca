@@ -1,0 +1,7 @@
+{
+	"name": "AzureSqlDatabase1",
+	"properties": {
+		"privateLinkResourceId": "/subscriptions/0320f0a6-da31-4542-aaff-50197885bc1a/resourceGroups/enem_rg/providers/Microsoft.Sql/servers/enemrdb",
+		"groupId": "sqlServer"
+	}
+}
