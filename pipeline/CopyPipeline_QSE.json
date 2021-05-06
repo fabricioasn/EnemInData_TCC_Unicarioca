@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy_vko",
+				"name": "Copy_wig",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -354,13 +354,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "SourceDataset_vko",
+						"referenceName": "SourceDataset_wig",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "DestinationDataset_vko",
+						"referenceName": "DestinationDataset_wig",
 						"type": "DatasetReference"
 					}
 				]
