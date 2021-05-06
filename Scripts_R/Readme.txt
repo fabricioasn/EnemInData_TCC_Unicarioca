@@ -1,0 +1,1 @@
+Folder destinated for R scripts used for PowerBI DataMining
