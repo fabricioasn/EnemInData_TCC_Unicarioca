@@ -5,8 +5,9 @@ TRUNCATE table Enem_Table
 
 -- Drop Table on EnemRDB created for homologation tests
 
-Drop table Enem_Table
-
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Enem_Table]') AND type in (N'U'))
+DROP TABLE [dbo].[Enem_Table]
+GO
 
 -- query the results to verify table
 SELECT TOP (1000) [  NU_INSCRICAO	]
