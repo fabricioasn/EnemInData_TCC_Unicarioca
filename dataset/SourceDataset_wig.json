@@ -1,0 +1,569 @@
+{
+	"name": "SourceDataset_wig",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStore1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureDataLakeStoreLocation",
+				"fileName": "MICRODADOS_ENEM_2019.csv"
+			},
+			"columnDelimiter": ";",
+			"rowDelimiter": "\n",
+			"encodingName": "UTF-7",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "NU_INSCRICAO",
+				"type": "String"
+			},
+			{
+				"name": "NU_ANO",
+				"type": "String"
+			},
+			{
+				"name": "CO_MUNICIPIO_RESIDENCIA",
+				"type": "String"
+			},
+			{
+				"name": "NO_MUNICIPIO_RESIDENCIA",
+				"type": "String"
+			},
+			{
+				"name": "CO_UF_RESIDENCIA",
+				"type": "String"
+			},
+			{
+				"name": "SG_UF_RESIDENCIA",
+				"type": "String"
+			},
+			{
+				"name": "NU_IDADE",
+				"type": "String"
+			},
+			{
+				"name": "TP_SEXO",
+				"type": "String"
+			},
+			{
+				"name": "TP_ESTADO_CIVIL",
+				"type": "String"
+			},
+			{
+				"name": "TP_COR_RACA",
+				"type": "String"
+			},
+			{
+				"name": "TP_NACIONALIDADE",
+				"type": "String"
+			},
+			{
+				"name": "CO_MUNICIPIO_NASCIMENTO",
+				"type": "String"
+			},
+			{
+				"name": "NO_MUNICIPIO_NASCIMENTO",
+				"type": "String"
+			},
+			{
+				"name": "CO_UF_NASCIMENTO",
+				"type": "String"
+			},
+			{
+				"name": "SG_UF_NASCIMENTO",
+				"type": "String"
+			},
+			{
+				"name": "TP_ST_CONCLUSAO",
+				"type": "String"
+			},
+			{
+				"name": "TP_ANO_CONCLUIU",
+				"type": "String"
+			},
+			{
+				"name": "TP_ESCOLA",
+				"type": "String"
+			},
+			{
+				"name": "TP_ENSINO",
+				"type": "String"
+			},
+			{
+				"name": "IN_TREINEIRO",
+				"type": "String"
+			},
+			{
+				"name": "CO_ESCOLA",
+				"type": "String"
+			},
+			{
+				"name": "CO_MUNICIPIO_ESC",
+				"type": "String"
+			},
+			{
+				"name": "NO_MUNICIPIO_ESC",
+				"type": "String"
+			},
+			{
+				"name": "CO_UF_ESC",
+				"type": "String"
+			},
+			{
+				"name": "SG_UF_ESC",
+				"type": "String"
+			},
+			{
+				"name": "TP_DEPENDENCIA_ADM_ESC",
+				"type": "String"
+			},
+			{
+				"name": "TP_LOCALIZACAO_ESC",
+				"type": "String"
+			},
+			{
+				"name": "TP_SIT_FUNC_ESC",
+				"type": "String"
+			},
+			{
+				"name": "IN_BAIXA_VISAO",
+				"type": "String"
+			},
+			{
+				"name": "IN_CEGUEIRA",
+				"type": "String"
+			},
+			{
+				"name": "IN_SURDEZ",
+				"type": "String"
+			},
+			{
+				"name": "IN_DEFICIENCIA_AUDITIVA",
+				"type": "String"
+			},
+			{
+				"name": "IN_SURDO_CEGUEIRA",
+				"type": "String"
+			},
+			{
+				"name": "IN_DEFICIENCIA_FISICA",
+				"type": "String"
+			},
+			{
+				"name": "IN_DEFICIENCIA_MENTAL",
+				"type": "String"
+			},
+			{
+				"name": "IN_DEFICIT_ATENCAO",
+				"type": "String"
+			},
+			{
+				"name": "IN_DISLEXIA",
+				"type": "String"
+			},
+			{
+				"name": "IN_DISCALCULIA",
+				"type": "String"
+			},
+			{
+				"name": "IN_AUTISMO",
+				"type": "String"
+			},
+			{
+				"name": "IN_VISAO_MONOCULAR",
+				"type": "String"
+			},
+			{
+				"name": "IN_OUTRA_DEF",
+				"type": "String"
+			},
+			{
+				"name": "IN_GESTANTE",
+				"type": "String"
+			},
+			{
+				"name": "IN_LACTANTE",
+				"type": "String"
+			},
+			{
+				"name": "IN_IDOSO",
+				"type": "String"
+			},
+			{
+				"name": "IN_ESTUDA_CLASSE_HOSPITALAR",
+				"type": "String"
+			},
+			{
+				"name": "IN_SEM_RECURSO",
+				"type": "String"
+			},
+			{
+				"name": "IN_BRAILLE",
+				"type": "String"
+			},
+			{
+				"name": "IN_AMPLIADA_24",
+				"type": "String"
+			},
+			{
+				"name": "IN_AMPLIADA_18",
+				"type": "String"
+			},
+			{
+				"name": "IN_LEDOR",
+				"type": "String"
+			},
+			{
+				"name": "IN_ACESSO",
+				"type": "String"
+			},
+			{
+				"name": "IN_TRANSCRICAO",
+				"type": "String"
+			},
+			{
+				"name": "IN_LIBRAS",
+				"type": "String"
+			},
+			{
+				"name": "IN_TEMPO_ADICIONAL",
+				"type": "String"
+			},
+			{
+				"name": "IN_LEITURA_LABIAL",
+				"type": "String"
+			},
+			{
+				"name": "IN_MESA_CADEIRA_RODAS",
+				"type": "String"
+			},
+			{
+				"name": "IN_MESA_CADEIRA_SEPARADA",
+				"type": "String"
+			},
+			{
+				"name": "IN_APOIO_PERNA",
+				"type": "String"
+			},
+			{
+				"name": "IN_GUIA_INTERPRETE",
+				"type": "String"
+			},
+			{
+				"name": "IN_COMPUTADOR",
+				"type": "String"
+			},
+			{
+				"name": "IN_CADEIRA_ESPECIAL",
+				"type": "String"
+			},
+			{
+				"name": "IN_CADEIRA_CANHOTO",
+				"type": "String"
+			},
+			{
+				"name": "IN_CADEIRA_ACOLCHOADA",
+				"type": "String"
+			},
+			{
+				"name": "IN_PROVA_DEITADO",
+				"type": "String"
+			},
+			{
+				"name": "IN_MOBILIARIO_OBESO",
+				"type": "String"
+			},
+			{
+				"name": "IN_LAMINA_OVERLAY",
+				"type": "String"
+			},
+			{
+				"name": "IN_PROTETOR_AURICULAR",
+				"type": "String"
+			},
+			{
+				"name": "IN_MEDIDOR_GLICOSE",
+				"type": "String"
+			},
+			{
+				"name": "IN_MAQUINA_BRAILE",
+				"type": "String"
+			},
+			{
+				"name": "IN_SOROBAN",
+				"type": "String"
+			},
+			{
+				"name": "IN_MARCA_PASSO",
+				"type": "String"
+			},
+			{
+				"name": "IN_SONDA",
+				"type": "String"
+			},
+			{
+				"name": "IN_MEDICAMENTOS",
+				"type": "String"
+			},
+			{
+				"name": "IN_SALA_INDIVIDUAL",
+				"type": "String"
+			},
+			{
+				"name": "IN_SALA_ESPECIAL",
+				"type": "String"
+			},
+			{
+				"name": "IN_SALA_ACOMPANHANTE",
+				"type": "String"
+			},
+			{
+				"name": "IN_MOBILIARIO_ESPECIFICO",
+				"type": "String"
+			},
+			{
+				"name": "IN_MATERIAL_ESPECIFICO",
+				"type": "String"
+			},
+			{
+				"name": "IN_NOME_SOCIAL",
+				"type": "String"
+			},
+			{
+				"name": "CO_MUNICIPIO_PROVA",
+				"type": "String"
+			},
+			{
+				"name": "NO_MUNICIPIO_PROVA",
+				"type": "String"
+			},
+			{
+				"name": "CO_UF_PROVA",
+				"type": "String"
+			},
+			{
+				"name": "SG_UF_PROVA",
+				"type": "String"
+			},
+			{
+				"name": "TP_PRESENCA_CN",
+				"type": "String"
+			},
+			{
+				"name": "TP_PRESENCA_CH",
+				"type": "String"
+			},
+			{
+				"name": "TP_PRESENCA_LC",
+				"type": "String"
+			},
+			{
+				"name": "TP_PRESENCA_MT",
+				"type": "String"
+			},
+			{
+				"name": "CO_PROVA_CN",
+				"type": "String"
+			},
+			{
+				"name": "CO_PROVA_CH",
+				"type": "String"
+			},
+			{
+				"name": "CO_PROVA_LC",
+				"type": "String"
+			},
+			{
+				"name": "CO_PROVA_MT",
+				"type": "String"
+			},
+			{
+				"name": "NU_NOTA_CN",
+				"type": "String"
+			},
+			{
+				"name": "NU_NOTA_CH",
+				"type": "String"
+			},
+			{
+				"name": "NU_NOTA_LC",
+				"type": "String"
+			},
+			{
+				"name": "NU_NOTA_MT",
+				"type": "String"
+			},
+			{
+				"name": "TX_RESPOSTAS_CN",
+				"type": "String"
+			},
+			{
+				"name": "TX_RESPOSTAS_CH",
+				"type": "String"
+			},
+			{
+				"name": "TX_RESPOSTAS_LC",
+				"type": "String"
+			},
+			{
+				"name": "TX_RESPOSTAS_MT",
+				"type": "String"
+			},
+			{
+				"name": "TP_LINGUA",
+				"type": "String"
+			},
+			{
+				"name": "TX_GABARITO_CN",
+				"type": "String"
+			},
+			{
+				"name": "TX_GABARITO_CH",
+				"type": "String"
+			},
+			{
+				"name": "TX_GABARITO_LC",
+				"type": "String"
+			},
+			{
+				"name": "TX_GABARITO_MT",
+				"type": "String"
+			},
+			{
+				"name": "TP_STATUS_REDACAO",
+				"type": "String"
+			},
+			{
+				"name": "NU_NOTA_COMP1",
+				"type": "String"
+			},
+			{
+				"name": "NU_NOTA_COMP2",
+				"type": "String"
+			},
+			{
+				"name": "NU_NOTA_COMP3",
+				"type": "String"
+			},
+			{
+				"name": "NU_NOTA_COMP4",
+				"type": "String"
+			},
+			{
+				"name": "NU_NOTA_COMP5",
+				"type": "String"
+			},
+			{
+				"name": "NU_NOTA_REDACAO",
+				"type": "String"
+			},
+			{
+				"name": "Q001",
+				"type": "String"
+			},
+			{
+				"name": "Q002",
+				"type": "String"
+			},
+			{
+				"name": "Q003",
+				"type": "String"
+			},
+			{
+				"name": "Q004",
+				"type": "String"
+			},
+			{
+				"name": "Q005",
+				"type": "String"
+			},
+			{
+				"name": "Q006",
+				"type": "String"
+			},
+			{
+				"name": "Q007",
+				"type": "String"
+			},
+			{
+				"name": "Q008",
+				"type": "String"
+			},
+			{
+				"name": "Q009",
+				"type": "String"
+			},
+			{
+				"name": "Q010",
+				"type": "String"
+			},
+			{
+				"name": "Q011",
+				"type": "String"
+			},
+			{
+				"name": "Q012",
+				"type": "String"
+			},
+			{
+				"name": "Q013",
+				"type": "String"
+			},
+			{
+				"name": "Q014",
+				"type": "String"
+			},
+			{
+				"name": "Q015",
+				"type": "String"
+			},
+			{
+				"name": "Q016",
+				"type": "String"
+			},
+			{
+				"name": "Q017",
+				"type": "String"
+			},
+			{
+				"name": "Q018",
+				"type": "String"
+			},
+			{
+				"name": "Q019",
+				"type": "String"
+			},
+			{
+				"name": "Q020",
+				"type": "String"
+			},
+			{
+				"name": "Q021",
+				"type": "String"
+			},
+			{
+				"name": "Q022",
+				"type": "String"
+			},
+			{
+				"name": "Q023",
+				"type": "String"
+			},
+			{
+				"name": "Q024",
+				"type": "String"
+			},
+			{
+				"name": "Q025",
+				"type": "String"
+			}
+		]
+	}
+}
