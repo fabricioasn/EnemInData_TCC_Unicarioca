@@ -1,0 +1,73 @@
+{
+	"name": "DestinationDatasetInfoPessoal",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabaseCopyData",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "NU_INSCRICAO",
+				"type": "varchar"
+			},
+			{
+				"name": "CO_MUNICIPIO_RESIDENCIA",
+				"type": "varchar"
+			},
+			{
+				"name": "NO_MUNICIPIO_RESIDENCIA",
+				"type": "varchar"
+			},
+			{
+				"name": "CO_UF_RESIDENCIA",
+				"type": "varchar"
+			},
+			{
+				"name": "SG_UF_RESIDENCIA",
+				"type": "varchar"
+			},
+			{
+				"name": "NU_IDADE",
+				"type": "varchar"
+			},
+			{
+				"name": "TP_SEXO",
+				"type": "varchar"
+			},
+			{
+				"name": "TP_ESTADO_CIVIL",
+				"type": "varchar"
+			},
+			{
+				"name": "TP_COR_RACA",
+				"type": "varchar"
+			},
+			{
+				"name": "TP_NACIONALIDADE",
+				"type": "varchar"
+			},
+			{
+				"name": "CO_MUNICIPIO_NASCIMENTO",
+				"type": "varchar"
+			},
+			{
+				"name": "NO_MUNICIPIO_NASCIMENTO",
+				"type": "varchar"
+			},
+			{
+				"name": "CO_UF_NASCIMENTO",
+				"type": "varchar"
+			},
+			{
+				"name": "SG_UF_NASCIMENTO",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Dimension_Table_Info_Pessoal"
+		}
+	}
+}
