@@ -1,0 +1,469 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Nome do Data Factory",
+			"defaultValue": "enemdf"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "[concat(parameters('factoryName'), '/CopyPipeline_ST_EM')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"activities": [
+					{
+						"name": "Copy_5hn",
+						"type": "Copy",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "7.00:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [
+							{
+								"name": "Source",
+								"value": "/MICRODADOS_ENEM_2019.csv"
+							},
+							{
+								"name": "Destination",
+								"value": "dbo.Dimension_Table_ST_EM"
+							}
+						],
+						"typeProperties": {
+							"source": {
+								"type": "DelimitedTextSource",
+								"storeSettings": {
+									"type": "AzureDataLakeStoreReadSettings",
+									"recursive": true,
+									"enablePartitionDiscovery": false
+								},
+								"formatSettings": {
+									"type": "DelimitedTextReadSettings",
+									"skipLineCount": 0
+								}
+							},
+							"sink": {
+								"type": "AzureSqlSink"
+							},
+							"enableStaging": false,
+							"validateDataConsistency": false,
+							"translator": {
+								"type": "TabularTranslator",
+								"mappings": [
+									{
+										"source": {
+											"name": "NU_INSCRICAO",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "NU_INSCRICAO",
+											"type": "String",
+											"physicalType": "varchar"
+										}
+									},
+									{
+										"source": {
+											"name": "TP_ST_CONCLUSAO",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "TP_ST_CONCLUSAO",
+											"type": "String",
+											"physicalType": "varchar"
+										}
+									},
+									{
+										"source": {
+											"name": "TP_ANO_CONCLUIU",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "TP_ANO_CONCLUIU",
+											"type": "String",
+											"physicalType": "varchar"
+										}
+									},
+									{
+										"source": {
+											"name": "TP_ESCOLA",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "TP_ESCOLA",
+											"type": "String",
+											"physicalType": "varchar"
+										}
+									},
+									{
+										"source": {
+											"name": "TP_ENSINO",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "TP_ENSINO",
+											"type": "String",
+											"physicalType": "varchar"
+										}
+									},
+									{
+										"source": {
+											"name": "IN_TREINEIRO",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "IN_TREINEIRO",
+											"type": "String",
+											"physicalType": "varchar"
+										}
+									},
+									{
+										"source": {
+											"name": "TP_LOCALIZACAO_ESC",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "TP_LOCALIZACAO_ESC",
+											"type": "String",
+											"physicalType": "varchar"
+										}
+									},
+									{
+										"source": {
+											"name": "TP_SIT_FUNC_ESC",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "TP_SIT_FUNC_ESC",
+											"type": "String",
+											"physicalType": "varchar"
+										}
+									},
+									{
+										"source": {
+											"name": "CO_ESCOLA",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "CO_ESCOLA",
+											"type": "String",
+											"physicalType": "varchar"
+										}
+									},
+									{
+										"source": {
+											"name": "CO_MUNICIPIO_ESC",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "CO_MUNICIPIO_ESC",
+											"type": "String",
+											"physicalType": "varchar"
+										}
+									},
+									{
+										"source": {
+											"name": "NO_MUNICIPIO_ESC",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "NO_MUNICIPIO_ESC",
+											"type": "String",
+											"physicalType": "varchar"
+										}
+									},
+									{
+										"source": {
+											"name": "CO_UF_ESC",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "CO_UF_ESC",
+											"type": "String",
+											"physicalType": "varchar"
+										}
+									},
+									{
+										"source": {
+											"name": "SG_UF_ESC",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "SG_UF_ESC",
+											"type": "String",
+											"physicalType": "varchar"
+										}
+									},
+									{
+										"source": {
+											"name": "TP_DEPENDENCIA_ADM_ESC",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "TP_DEPENDENCIA_ADM_ESC",
+											"type": "String",
+											"physicalType": "varchar"
+										}
+									}
+								],
+								"typeConversion": true,
+								"typeConversionSettings": {
+									"allowDataTruncation": true,
+									"treatBooleanAsNumber": false
+								}
+							}
+						},
+						"inputs": [
+							{
+								"referenceName": "SourceDataset_5hn",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "DestinationDataset_5hn",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
+					}
+				],
+				"annotations": []
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/EnemFactTableCopyData')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"description": "Copy from datalake gen1",
+				"activities": [
+					{
+						"name": "Copy_xe7",
+						"type": "Copy",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "7.00:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [
+							{
+								"name": "Source",
+								"value": "/MICRODADOS_ENEM_2019.csv"
+							},
+							{
+								"name": "Destination",
+								"value": "dbo.Enem_Fact_Table"
+							}
+						],
+						"typeProperties": {
+							"source": {
+								"type": "DelimitedTextSource",
+								"storeSettings": {
+									"type": "AzureDataLakeStoreReadSettings",
+									"recursive": true,
+									"enablePartitionDiscovery": false
+								},
+								"formatSettings": {
+									"type": "DelimitedTextReadSettings",
+									"skipLineCount": 0
+								}
+							},
+							"sink": {
+								"type": "AzureSqlSink"
+							},
+							"enableStaging": false,
+							"validateDataConsistency": false,
+							"translator": {
+								"type": "TabularTranslator",
+								"mappings": [
+									{
+										"source": {
+											"name": "NU_INSCRICAO",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "NU_INSCRICAO",
+											"type": "String",
+											"physicalType": "varchar"
+										}
+									},
+									{
+										"source": {
+											"name": "NU_NOTA_CN",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "NU_NOTA_CN",
+											"type": "String",
+											"physicalType": "varchar"
+										}
+									},
+									{
+										"source": {
+											"name": "NU_NOTA_CH",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "NU_NOTA_CH",
+											"type": "String",
+											"physicalType": "varchar"
+										}
+									},
+									{
+										"source": {
+											"name": "NU_NOTA_LC",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "NU_NOTA_LC",
+											"type": "String",
+											"physicalType": "varchar"
+										}
+									},
+									{
+										"source": {
+											"name": "NU_NOTA_MT",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "NU_NOTA_MT",
+											"type": "String",
+											"physicalType": "varchar"
+										}
+									},
+									{
+										"source": {
+											"name": "NU_NOTA_REDACAO",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "NU_NOTA_REDACAO",
+											"type": "String",
+											"physicalType": "varchar"
+										}
+									},
+									{
+										"source": {
+											"name": "NU_NOTA_COMP1",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "NU_NOTA_COMP1",
+											"type": "String",
+											"physicalType": "varchar"
+										}
+									},
+									{
+										"source": {
+											"name": "NU_NOTA_COMP2",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "NU_NOTA_COMP2",
+											"type": "String",
+											"physicalType": "varchar"
+										}
+									},
+									{
+										"source": {
+											"name": "NU_NOTA_COMP3",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "NU_NOTA_COMP3",
+											"type": "String",
+											"physicalType": "varchar"
+										}
+									},
+									{
+										"source": {
+											"name": "NU_NOTA_COMP4",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "NU_NOTA_COMP4",
+											"type": "String",
+											"physicalType": "varchar"
+										}
+									},
+									{
+										"source": {
+											"name": "NU_NOTA_COMP5",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "NU_NOTA_COMP5",
+											"type": "String",
+											"physicalType": "varchar"
+										}
+									}
+								],
+								"typeConversion": true,
+								"typeConversionSettings": {
+									"allowDataTruncation": true,
+									"treatBooleanAsNumber": false
+								}
+							}
+						},
+						"inputs": [
+							{
+								"referenceName": "SourceDataset_xe7",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "DestinationDataset_xe7",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
+					}
+				],
+				"annotations": []
+			},
+			"dependsOn": []
+		}
+	]
+}
