@@ -1,0 +1,695 @@
+{
+	"name": "CopyPipeline_Inclusao",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy_dev",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "/MICRODADOS_ENEM_2019.csv"
+					},
+					{
+						"name": "Destination",
+						"value": "dbo.Dimension_Table_Inclusao"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureDataLakeStoreReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings",
+							"skipLineCount": 0
+						}
+					},
+					"sink": {
+						"type": "AzureSqlSink"
+					},
+					"enableStaging": false,
+					"validateDataConsistency": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "NU_INSCRICAO",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "NU_INSCRICAO",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IN_BAIXA_VISAO",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IN_BAIXA_VISAO",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IN_CEGUEIRA",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IN_CEGUEIRA",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IN_SURDEZ",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IN_SURDEZ",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IN_DEFICIENCIA_AUDITIVA",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IN_DEFICIENCIA_AUDITIVA",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IN_SURDO_CEGUEIRA",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IN_SURDO_CEGUEIRA",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IN_SALA_ACOMPANHANTE",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IN_SALA_ACOMPANHANTE",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IN_MOBILIARIO_ESPECIFICO",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IN_MOBILIARIO_ESPECIFICO",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IN_MATERIAL_ESPECIFICO",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IN_MATERIAL_ESPECIFICO",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IN_NOME_SOCIAL",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IN_NOME_SOCIAL",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IN_SOROBAN",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IN_SOROBAN",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IN_MARCA_PASSO",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IN_MARCA_PASSO",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IN_SONDA",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IN_SONDA",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IN_MEDICAMENTOS",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IN_MEDICAMENTOS",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IN_SALA_INDIVIDUAL",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IN_SALA_INDIVIDUAL",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IN_SALA_ESPECIAL",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IN_SALA_ESPECIAL",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IN_PROVA_DEITADO",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IN_PROVA_DEITADO",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IN_MOBILIARIO_OBESO",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IN_MOBILIARIO_OBESO",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IN_LAMINA_OVERLAY",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IN_LAMINA_OVERLAY",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IN_PROTETOR_AURICULAR",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IN_PROTETOR_AURICULAR",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IN_MEDIDOR_GLICOSE",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IN_MEDIDOR_GLICOSE",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IN_MAQUINA_BRAILE",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IN_MAQUINA_BRAILE",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IN_APOIO_PERNA",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IN_APOIO_PERNA",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IN_GUIA_INTERPRETE",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IN_GUIA_INTERPRETE",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IN_COMPUTADOR",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IN_COMPUTADOR",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IN_CADEIRA_ESPECIAL",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IN_CADEIRA_ESPECIAL",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IN_CADEIRA_CANHOTO",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IN_CADEIRA_CANHOTO",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IN_CADEIRA_ACOLCHOADA",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IN_CADEIRA_ACOLCHOADA",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IN_TRANSCRICAO",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IN_TRANSCRICAO",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IN_LIBRAS",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IN_LIBRAS",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IN_TEMPO_ADICIONAL",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IN_TEMPO_ADICIONAL",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IN_LEITURA_LABIAL",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IN_LEITURA_LABIAL",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IN_MESA_CADEIRA_RODAS",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IN_MESA_CADEIRA_RODAS",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IN_MESA_CADEIRA_SEPARADA",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IN_MESA_CADEIRA_SEPARADA",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IN_SEM_RECURSO",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IN_SEM_RECURSO",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IN_BRAILLE",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IN_BRAILLE",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IN_AMPLIADA_24",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IN_AMPLIADA_24",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IN_AMPLIADA_18",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IN_AMPLIADA_18",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IN_LEDOR",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IN_LEDOR",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IN_ACESSO",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IN_ACESSO",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IN_VISAO_MONOCULAR",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IN_VISAO_MONOCULAR",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IN_OUTRA_DEF",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IN_OUTRA_DEF",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IN_GESTANTE",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IN_GESTANTE",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IN_LACTANTE",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IN_LACTANTE",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IN_IDOSO",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IN_IDOSO",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IN_ESTUDA_CLASSE_HOSPITALAR",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IN_ESTUDA_CLASSE_HOSPITALAR",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IN_DEFICIENCIA_FISICA",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IN_DEFICIENCIA_FISICA",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IN_DEFICIENCIA_MENTAL",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IN_DEFICIENCIA_MENTAL",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IN_DEFICIT_ATENCAO",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IN_DEFICIT_ATENCAO",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IN_DISLEXIA",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IN_DISLEXIA",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IN_DISCALCULIA",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IN_DISCALCULIA",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IN_AUTISMO",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IN_AUTISMO",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "SourceDataset_dev",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DestinationDataset_dev",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	}
+}

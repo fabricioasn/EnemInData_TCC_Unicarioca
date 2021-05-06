@@ -1,0 +1,73 @@
+{
+	"name": "DestinationDatasetSTEM",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabaseCopyData",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "NU_INSCRICAO",
+				"type": "varchar"
+			},
+			{
+				"name": "TP_ST_CONCLUSAO",
+				"type": "varchar"
+			},
+			{
+				"name": "TP_ANO_CONCLUIU",
+				"type": "varchar"
+			},
+			{
+				"name": "TP_ESCOLA",
+				"type": "varchar"
+			},
+			{
+				"name": "TP_ENSINO",
+				"type": "varchar"
+			},
+			{
+				"name": "IN_TREINEIRO",
+				"type": "varchar"
+			},
+			{
+				"name": "CO_ESCOLA",
+				"type": "varchar"
+			},
+			{
+				"name": "CO_MUNICIPIO_ESC",
+				"type": "varchar"
+			},
+			{
+				"name": "NO_MUNICIPIO_ESC",
+				"type": "varchar"
+			},
+			{
+				"name": "CO_UF_ESC",
+				"type": "varchar"
+			},
+			{
+				"name": "SG_UF_ESC",
+				"type": "varchar"
+			},
+			{
+				"name": "TP_DEPENDENCIA_ADM_ESC",
+				"type": "varchar"
+			},
+			{
+				"name": "TP_LOCALIZACAO_ESC",
+				"type": "varchar"
+			},
+			{
+				"name": "TP_SIT_FUNC_ESC",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Dimension_Table_ST_EM"
+		}
+	}
+}

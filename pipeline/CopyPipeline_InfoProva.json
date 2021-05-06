@@ -1,0 +1,252 @@
+{
+	"name": "CopyPipeline_InfoProva",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy_kas",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "/"
+					},
+					{
+						"name": "Destination",
+						"value": "dbo.Dimension_Table_Info_Prova"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureDataLakeStoreReadSettings",
+							"recursive": true,
+							"wildcardFileName": "*",
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings",
+							"skipLineCount": 0
+						}
+					},
+					"sink": {
+						"type": "AzureSqlSink"
+					},
+					"enableStaging": false,
+					"validateDataConsistency": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "NU_INSCRICAO",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "NU_INSCRICAO",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "CO_MUNICIPIO_PROVA",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CO_MUNICIPIO_PROVA",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "NO_MUNICIPIO_PROVA",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "NO_MUNICIPIO_PROVA",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "CO_UF_PROVA",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CO_UF_PROVA",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "SG_UF_PROVA",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "SG_UF_PROVA",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "TP_PRESENCA_CN",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "TP_PRESENCA_CN",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "CO_PROVA_MT",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CO_PROVA_MT",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "TP_LINGUA",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "TP_LINGUA",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "TP_STATUS_REDACAO",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "TP_STATUS_REDACAO",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "TP_PRESENCA_CH",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "TP_PRESENCA_CH",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "TP_PRESENCA_LC",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "TP_PRESENCA_LC",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "TP_PRESENCA_MT",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "TP_PRESENCA_MT",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "CO_PROVA_CN",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CO_PROVA_CN",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "CO_PROVA_CH",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CO_PROVA_CH",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "CO_PROVA_LC",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CO_PROVA_LC",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "SourceDataset_kas",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DestinationDataset_kas",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	}
+}

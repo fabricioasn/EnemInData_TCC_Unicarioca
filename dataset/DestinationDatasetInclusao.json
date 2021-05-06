@@ -1,0 +1,225 @@
+{
+	"name": "DestinationDatasetInclusao",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabaseCopyData",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "NU_INSCRICAO",
+				"type": "varchar"
+			},
+			{
+				"name": "IN_BAIXA_VISAO",
+				"type": "varchar"
+			},
+			{
+				"name": "IN_CEGUEIRA",
+				"type": "varchar"
+			},
+			{
+				"name": "IN_SURDEZ",
+				"type": "varchar"
+			},
+			{
+				"name": "IN_DEFICIENCIA_AUDITIVA",
+				"type": "varchar"
+			},
+			{
+				"name": "IN_SURDO_CEGUEIRA",
+				"type": "varchar"
+			},
+			{
+				"name": "IN_DEFICIENCIA_FISICA",
+				"type": "varchar"
+			},
+			{
+				"name": "IN_DEFICIENCIA_MENTAL",
+				"type": "varchar"
+			},
+			{
+				"name": "IN_DEFICIT_ATENCAO",
+				"type": "varchar"
+			},
+			{
+				"name": "IN_DISLEXIA",
+				"type": "varchar"
+			},
+			{
+				"name": "IN_DISCALCULIA",
+				"type": "varchar"
+			},
+			{
+				"name": "IN_AUTISMO",
+				"type": "varchar"
+			},
+			{
+				"name": "IN_VISAO_MONOCULAR",
+				"type": "varchar"
+			},
+			{
+				"name": "IN_OUTRA_DEF",
+				"type": "varchar"
+			},
+			{
+				"name": "IN_GESTANTE",
+				"type": "varchar"
+			},
+			{
+				"name": "IN_LACTANTE",
+				"type": "varchar"
+			},
+			{
+				"name": "IN_IDOSO",
+				"type": "varchar"
+			},
+			{
+				"name": "IN_ESTUDA_CLASSE_HOSPITALAR",
+				"type": "varchar"
+			},
+			{
+				"name": "IN_SEM_RECURSO",
+				"type": "varchar"
+			},
+			{
+				"name": "IN_BRAILLE",
+				"type": "varchar"
+			},
+			{
+				"name": "IN_AMPLIADA_24",
+				"type": "varchar"
+			},
+			{
+				"name": "IN_AMPLIADA_18",
+				"type": "varchar"
+			},
+			{
+				"name": "IN_LEDOR",
+				"type": "varchar"
+			},
+			{
+				"name": "IN_ACESSO",
+				"type": "varchar"
+			},
+			{
+				"name": "IN_TRANSCRICAO",
+				"type": "varchar"
+			},
+			{
+				"name": "IN_LIBRAS",
+				"type": "varchar"
+			},
+			{
+				"name": "IN_TEMPO_ADICIONAL",
+				"type": "varchar"
+			},
+			{
+				"name": "IN_LEITURA_LABIAL",
+				"type": "varchar"
+			},
+			{
+				"name": "IN_MESA_CADEIRA_RODAS",
+				"type": "varchar"
+			},
+			{
+				"name": "IN_MESA_CADEIRA_SEPARADA",
+				"type": "varchar"
+			},
+			{
+				"name": "IN_APOIO_PERNA",
+				"type": "varchar"
+			},
+			{
+				"name": "IN_GUIA_INTERPRETE",
+				"type": "varchar"
+			},
+			{
+				"name": "IN_COMPUTADOR",
+				"type": "varchar"
+			},
+			{
+				"name": "IN_CADEIRA_ESPECIAL",
+				"type": "varchar"
+			},
+			{
+				"name": "IN_CADEIRA_CANHOTO",
+				"type": "varchar"
+			},
+			{
+				"name": "IN_CADEIRA_ACOLCHOADA",
+				"type": "varchar"
+			},
+			{
+				"name": "IN_PROVA_DEITADO",
+				"type": "varchar"
+			},
+			{
+				"name": "IN_MOBILIARIO_OBESO",
+				"type": "varchar"
+			},
+			{
+				"name": "IN_LAMINA_OVERLAY",
+				"type": "varchar"
+			},
+			{
+				"name": "IN_PROTETOR_AURICULAR",
+				"type": "varchar"
+			},
+			{
+				"name": "IN_MEDIDOR_GLICOSE",
+				"type": "varchar"
+			},
+			{
+				"name": "IN_MAQUINA_BRAILE",
+				"type": "varchar"
+			},
+			{
+				"name": "IN_SOROBAN",
+				"type": "varchar"
+			},
+			{
+				"name": "IN_MARCA_PASSO",
+				"type": "varchar"
+			},
+			{
+				"name": "IN_SONDA",
+				"type": "varchar"
+			},
+			{
+				"name": "IN_MEDICAMENTOS",
+				"type": "varchar"
+			},
+			{
+				"name": "IN_SALA_INDIVIDUAL",
+				"type": "varchar"
+			},
+			{
+				"name": "IN_SALA_ESPECIAL",
+				"type": "varchar"
+			},
+			{
+				"name": "IN_SALA_ACOMPANHANTE",
+				"type": "varchar"
+			},
+			{
+				"name": "IN_MOBILIARIO_ESPECIFICO",
+				"type": "varchar"
+			},
+			{
+				"name": "IN_MATERIAL_ESPECIFICO",
+				"type": "varchar"
+			},
+			{
+				"name": "IN_NOME_SOCIAL",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Dimension_Table_Inclusao"
+		}
+	}
+}
