@@ -1,0 +1,117 @@
+{
+	"name": "DestinationDatasetQSE",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabaseCopyData",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "NU_INSCRICAO",
+				"type": "varchar"
+			},
+			{
+				"name": "Q001",
+				"type": "varchar"
+			},
+			{
+				"name": "Q002",
+				"type": "varchar"
+			},
+			{
+				"name": "Q003",
+				"type": "varchar"
+			},
+			{
+				"name": "Q004",
+				"type": "varchar"
+			},
+			{
+				"name": "Q005",
+				"type": "varchar"
+			},
+			{
+				"name": "Q006",
+				"type": "varchar"
+			},
+			{
+				"name": "Q007",
+				"type": "varchar"
+			},
+			{
+				"name": "Q008",
+				"type": "varchar"
+			},
+			{
+				"name": "Q009",
+				"type": "varchar"
+			},
+			{
+				"name": "Q010",
+				"type": "varchar"
+			},
+			{
+				"name": "Q011",
+				"type": "varchar"
+			},
+			{
+				"name": "Q012",
+				"type": "varchar"
+			},
+			{
+				"name": "Q013",
+				"type": "varchar"
+			},
+			{
+				"name": "Q014",
+				"type": "varchar"
+			},
+			{
+				"name": "Q015",
+				"type": "varchar"
+			},
+			{
+				"name": "Q016",
+				"type": "varchar"
+			},
+			{
+				"name": "Q017",
+				"type": "varchar"
+			},
+			{
+				"name": "Q018",
+				"type": "varchar"
+			},
+			{
+				"name": "Q019",
+				"type": "varchar"
+			},
+			{
+				"name": "Q020",
+				"type": "varchar"
+			},
+			{
+				"name": "Q021",
+				"type": "varchar"
+			},
+			{
+				"name": "Q022",
+				"type": "varchar"
+			},
+			{
+				"name": "Q023",
+				"type": "varchar"
+			},
+			{
+				"name": "Q024",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Dimension_Table_QSE"
+		}
+	}
+}
