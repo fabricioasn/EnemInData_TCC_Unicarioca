@@ -821,7 +821,7 @@
 		],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "Enem_Table"
+			"table": "Enem_Fact_Table"
 		}
 	}
 }
