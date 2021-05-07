@@ -22,3 +22,15 @@ ALTER TABLE jft.Join_FactDim_STEM
       ON DELETE CASCADE
       ON UPDATE CASCADE
 	  
+ALTER TABLE jft.Join_FactDim_Inclusao
+   ADD CONSTRAINT FK_JoinInclusao_EnemFactTable FOREIGN KEY (NU_INSCRICAO)
+      REFERENCES dbo.Enem_Fact_Table (NU_INSCRICAO)
+      ON DELETE CASCADE
+      ON UPDATE CASCADE
+	  
+ALTER TABLE jft.Join_FactDim_InfoProva_InfoPessoa_STEM_QSE
+   ADD CONSTRAINT FK_JoinInfoProvaInfoPessoaSTEMQSE_EnemFactTable FOREIGN KEY (NU_INSCRICAO)
+      REFERENCES dbo.Enem_Fact_Table (NU_INSCRICAO)
+      ON DELETE CASCADE
+      ON UPDATE CASCADE
+	  
