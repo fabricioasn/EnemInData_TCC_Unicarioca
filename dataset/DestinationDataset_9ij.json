@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureDataLakeStoreLocation",
-				"fileName": "All",
+				"fileName": "FactDimAllTablesNoInclusao",
 				"folderPath": "TransformedModelRDW/JoinFactTables"
 			},
 			"columnDelimiter": ",",
