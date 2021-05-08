@@ -1,0 +1,24 @@
+{
+	"name": "DestinationDataset_kuc",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStore1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureDataLakeStoreLocation",
+				"fileName": "JoinFactDimAllTablesWithourInclusao",
+				"folderPath": "TransformedModelRDW/JoinFactTables"
+			},
+			"columnDelimiter": ",",
+			"encodingName": "UTF-7",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
