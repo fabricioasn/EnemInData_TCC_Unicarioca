@@ -1,0 +1,317 @@
+{
+	"name": "SourceDataset_kuc",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabaseCopyData",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "NU_INSCRICAO",
+				"type": "varchar"
+			},
+			{
+				"name": "NU_NOTA_CN",
+				"type": "varchar"
+			},
+			{
+				"name": "NU_NOTA_CH",
+				"type": "varchar"
+			},
+			{
+				"name": "NU_NOTA_LC",
+				"type": "varchar"
+			},
+			{
+				"name": "NU_NOTA_MT",
+				"type": "varchar"
+			},
+			{
+				"name": "NU_NOTA_REDACAO",
+				"type": "varchar"
+			},
+			{
+				"name": "NU_NOTA_COMP1",
+				"type": "varchar"
+			},
+			{
+				"name": "NU_NOTA_COMP2",
+				"type": "varchar"
+			},
+			{
+				"name": "NU_NOTA_COMP3",
+				"type": "varchar"
+			},
+			{
+				"name": "NU_NOTA_COMP4",
+				"type": "varchar"
+			},
+			{
+				"name": "NU_NOTA_COMP5",
+				"type": "varchar"
+			},
+			{
+				"name": "CO_MUNICIPIO_PROVA",
+				"type": "varchar"
+			},
+			{
+				"name": "NO_MUNICIPIO_PROVA",
+				"type": "varchar"
+			},
+			{
+				"name": "CO_UF_PROVA",
+				"type": "varchar"
+			},
+			{
+				"name": "SG_UF_PROVA",
+				"type": "varchar"
+			},
+			{
+				"name": "TP_PRESENCA_CN",
+				"type": "varchar"
+			},
+			{
+				"name": "TP_PRESENCA_CH",
+				"type": "varchar"
+			},
+			{
+				"name": "TP_PRESENCA_LC",
+				"type": "varchar"
+			},
+			{
+				"name": "TP_PRESENCA_MT",
+				"type": "varchar"
+			},
+			{
+				"name": "CO_PROVA_CN",
+				"type": "varchar"
+			},
+			{
+				"name": "CO_PROVA_CH",
+				"type": "varchar"
+			},
+			{
+				"name": "CO_PROVA_LC",
+				"type": "varchar"
+			},
+			{
+				"name": "CO_PROVA_MT",
+				"type": "varchar"
+			},
+			{
+				"name": "TP_LINGUA",
+				"type": "varchar"
+			},
+			{
+				"name": "TP_STATUS_REDACAO",
+				"type": "varchar"
+			},
+			{
+				"name": "CO_MUNICIPIO_RESIDENCIA",
+				"type": "varchar"
+			},
+			{
+				"name": "NO_MUNICIPIO_RESIDENCIA",
+				"type": "varchar"
+			},
+			{
+				"name": "CO_UF_RESIDENCIA",
+				"type": "varchar"
+			},
+			{
+				"name": "SG_UF_RESIDENCIA",
+				"type": "varchar"
+			},
+			{
+				"name": "NU_IDADE",
+				"type": "varchar"
+			},
+			{
+				"name": "TP_SEXO",
+				"type": "varchar"
+			},
+			{
+				"name": "TP_ESTADO_CIVIL",
+				"type": "varchar"
+			},
+			{
+				"name": "TP_COR_RACA",
+				"type": "varchar"
+			},
+			{
+				"name": "TP_NACIONALIDADE",
+				"type": "varchar"
+			},
+			{
+				"name": "CO_MUNICIPIO_NASCIMENTO",
+				"type": "varchar"
+			},
+			{
+				"name": "NO_MUNICIPIO_NASCIMENTO",
+				"type": "varchar"
+			},
+			{
+				"name": "CO_UF_NASCIMENTO",
+				"type": "varchar"
+			},
+			{
+				"name": "SG_UF_NASCIMENTO",
+				"type": "varchar"
+			},
+			{
+				"name": "TP_ST_CONCLUSAO",
+				"type": "varchar"
+			},
+			{
+				"name": "TP_ANO_CONCLUIU",
+				"type": "varchar"
+			},
+			{
+				"name": "TP_ESCOLA",
+				"type": "varchar"
+			},
+			{
+				"name": "TP_ENSINO",
+				"type": "varchar"
+			},
+			{
+				"name": "IN_TREINEIRO",
+				"type": "varchar"
+			},
+			{
+				"name": "CO_ESCOLA",
+				"type": "varchar"
+			},
+			{
+				"name": "CO_MUNICIPIO_ESC",
+				"type": "varchar"
+			},
+			{
+				"name": "NO_MUNICIPIO_ESC",
+				"type": "varchar"
+			},
+			{
+				"name": "CO_UF_ESC",
+				"type": "varchar"
+			},
+			{
+				"name": "SG_UF_ESC",
+				"type": "varchar"
+			},
+			{
+				"name": "TP_DEPENDENCIA_ADM_ESC",
+				"type": "varchar"
+			},
+			{
+				"name": "TP_LOCALIZACAO_ESC",
+				"type": "varchar"
+			},
+			{
+				"name": "TP_SIT_FUNC_ESC",
+				"type": "varchar"
+			},
+			{
+				"name": "Q001",
+				"type": "varchar"
+			},
+			{
+				"name": "Q002",
+				"type": "varchar"
+			},
+			{
+				"name": "Q003",
+				"type": "varchar"
+			},
+			{
+				"name": "Q004",
+				"type": "varchar"
+			},
+			{
+				"name": "Q005",
+				"type": "varchar"
+			},
+			{
+				"name": "Q006",
+				"type": "varchar"
+			},
+			{
+				"name": "Q007",
+				"type": "varchar"
+			},
+			{
+				"name": "Q008",
+				"type": "varchar"
+			},
+			{
+				"name": "Q009",
+				"type": "varchar"
+			},
+			{
+				"name": "Q010",
+				"type": "varchar"
+			},
+			{
+				"name": "Q011",
+				"type": "varchar"
+			},
+			{
+				"name": "Q012",
+				"type": "varchar"
+			},
+			{
+				"name": "Q013",
+				"type": "varchar"
+			},
+			{
+				"name": "Q014",
+				"type": "varchar"
+			},
+			{
+				"name": "Q015",
+				"type": "varchar"
+			},
+			{
+				"name": "Q016",
+				"type": "varchar"
+			},
+			{
+				"name": "Q017",
+				"type": "varchar"
+			},
+			{
+				"name": "Q018",
+				"type": "varchar"
+			},
+			{
+				"name": "Q019",
+				"type": "varchar"
+			},
+			{
+				"name": "Q020",
+				"type": "varchar"
+			},
+			{
+				"name": "Q021",
+				"type": "varchar"
+			},
+			{
+				"name": "Q022",
+				"type": "varchar"
+			},
+			{
+				"name": "Q023",
+				"type": "varchar"
+			},
+			{
+				"name": "Q024",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "jft",
+			"table": "Join_FactDim_InfoProva_InfoPessoa_STEM_QSE"
+		}
+	}
+}
