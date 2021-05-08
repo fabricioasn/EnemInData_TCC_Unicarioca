@@ -1,0 +1,22 @@
+{
+	"name": "DestinationDataset_9ij",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStore1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureDataLakeStoreLocation",
+				"folderPath": "TransformedModelRDW/JoinFactTables"
+			},
+			"columnDelimiter": ",",
+			"encodingName": "UTF-7",
+			"escapeChar": "\\",
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
