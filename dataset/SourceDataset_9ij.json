@@ -1,0 +1,16 @@
+{
+	"name": "SourceDataset_9ij",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabaseCopyData",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "jft",
+			"table": "Join_FactDim_InfoProva_InfoPessoa_STEM_QSE"
+		}
+	}
+}
