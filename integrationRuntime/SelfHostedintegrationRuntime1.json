@@ -1,0 +1,7 @@
+{
+	"name": "SelfHostedintegrationRuntime1",
+	"properties": {
+		"type": "SelfHosted",
+		"description": "IR self hosted local on-premises"
+	}
+}
