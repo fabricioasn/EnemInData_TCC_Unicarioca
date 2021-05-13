@@ -1,0 +1,17 @@
+{
+	"name": "AzureDataLakeStoreForEnemv2",
+	"properties": {
+		"annotations": [],
+		"type": "AzureDataLakeStore",
+		"typeProperties": {
+			"dataLakeStoreUri": "https://enemindatadlv2.azuredatalakestore.net/webhdfs/v1",
+			"tenant": "428485d5-a87c-430d-b8ce-168fe5ab82f0",
+			"subscriptionId": "428485d5-a87c-430d-b8ce-168fe5ab82f0",
+			"resourceGroupName": "enem_model_rg"
+		},
+		"connectVia": {
+			"referenceName": "SelfHostedintegrationRuntime1",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
