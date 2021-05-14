@@ -466,8 +466,8 @@
 			}
 		],
 		"typeProperties": {
-			"schema": "jft",
-			"table": "Join_FactDim_InfoProva_InfoPessoa_STEM_QSE"
+			"schema": "jdt",
+			"table": "Join_Dim_InfoProva_InfoPessoa_STEM_QSE"
 		}
 	}
 }
