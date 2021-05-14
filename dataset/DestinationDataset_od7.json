@@ -77,7 +77,7 @@
 		],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "Enem_Fact_Table"
+			"table": "Dimension_Table_Info_Prova"
 		}
 	}
 }
