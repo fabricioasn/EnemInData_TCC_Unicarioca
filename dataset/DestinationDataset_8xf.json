@@ -95,7 +95,7 @@
 		],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "Dimension_Table_Info_Pessoal"
+			"table": "Dimension_Table_QSE"
 		}
 	}
 }
