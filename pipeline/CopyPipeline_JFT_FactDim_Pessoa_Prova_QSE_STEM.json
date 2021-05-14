@@ -25,32 +25,31 @@
 				],
 				"typeProperties": {
 					"source": {
-						"type": "AzureSqlSource",
-						"partitionOption": "None"
-					},
-					"sink": {
-						"type": "DelimitedTextSink",
+						"type": "DelimitedTextSource",
 						"storeSettings": {
-							"type": "AzureDataLakeStoreWriteSettings"
+							"type": "AzureDataLakeStoreReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
-							"type": "DelimitedTextWriteSettings",
-							"quoteAllText": true,
-							"fileExtension": ".txt"
+							"type": "DelimitedTextReadSettings"
 						}
+					},
+					"sink": {
+						"type": "SqlServerSink"
 					},
 					"enableStaging": false,
 					"validateDataConsistency": false
 				},
 				"inputs": [
 					{
-						"referenceName": "SourceDataset_kuc",
+						"referenceName": "MicroDadosEnemCSV",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "DestinationDataset_kuc",
+						"referenceName": "SqlServerTableAllFactDimensionsExcInclusao",
 						"type": "DatasetReference"
 					}
 				]
