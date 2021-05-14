@@ -1,0 +1,325 @@
+{
+	"name": "DataFlowJoinFactAllDimsNoInclusao",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStoreForEnemv2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureDataLakeStoreLocation",
+				"fileName": "JoinFactDimensions_InfoProva_InfoPessoa_STEM_QSE.csv",
+				"folderPath": "TransformedModel/ModeledData_NonPreProcessed"
+			},
+			"columnDelimiter": ";",
+			"encodingName": "UTF-7",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "NU_INSCRICAO",
+				"type": "String"
+			},
+			{
+				"name": "NU_NOTA_CN",
+				"type": "String"
+			},
+			{
+				"name": "NU_NOTA_CH",
+				"type": "String"
+			},
+			{
+				"name": "NU_NOTA_LC",
+				"type": "String"
+			},
+			{
+				"name": "NU_NOTA_MT",
+				"type": "String"
+			},
+			{
+				"name": "NU_NOTA_REDACAO",
+				"type": "String"
+			},
+			{
+				"name": "NU_NOTA_COMP1",
+				"type": "String"
+			},
+			{
+				"name": "NU_NOTA_COMP2",
+				"type": "String"
+			},
+			{
+				"name": "NU_NOTA_COMP3",
+				"type": "String"
+			},
+			{
+				"name": "NU_NOTA_COMP4",
+				"type": "String"
+			},
+			{
+				"name": "NU_NOTA_COMP5",
+				"type": "String"
+			},
+			{
+				"name": "CO_MUNICIPIO_PROVA",
+				"type": "String"
+			},
+			{
+				"name": "NO_MUNICIPIO_PROVA",
+				"type": "String"
+			},
+			{
+				"name": "CO_UF_PROVA",
+				"type": "String"
+			},
+			{
+				"name": "SG_UF_PROVA",
+				"type": "String"
+			},
+			{
+				"name": "TP_PRESENCA_CN",
+				"type": "String"
+			},
+			{
+				"name": "TP_PRESENCA_CH",
+				"type": "String"
+			},
+			{
+				"name": "TP_PRESENCA_LC",
+				"type": "String"
+			},
+			{
+				"name": "TP_PRESENCA_MT",
+				"type": "String"
+			},
+			{
+				"name": "CO_PROVA_CN",
+				"type": "String"
+			},
+			{
+				"name": "CO_PROVA_CH",
+				"type": "String"
+			},
+			{
+				"name": "CO_PROVA_LC",
+				"type": "String"
+			},
+			{
+				"name": "CO_PROVA_MT",
+				"type": "String"
+			},
+			{
+				"name": "TP_LINGUA",
+				"type": "String"
+			},
+			{
+				"name": "TP_STATUS_REDACAO",
+				"type": "String"
+			},
+			{
+				"name": "CO_MUNICIPIO_RESIDENCIA",
+				"type": "String"
+			},
+			{
+				"name": "NO_MUNICIPIO_RESIDENCIA",
+				"type": "String"
+			},
+			{
+				"name": "CO_UF_RESIDENCIA",
+				"type": "String"
+			},
+			{
+				"name": "SG_UF_RESIDENCIA",
+				"type": "String"
+			},
+			{
+				"name": "NU_IDADE",
+				"type": "String"
+			},
+			{
+				"name": "TP_SEXO",
+				"type": "String"
+			},
+			{
+				"name": "TP_ESTADO_CIVIL",
+				"type": "String"
+			},
+			{
+				"name": "TP_COR_RACA",
+				"type": "String"
+			},
+			{
+				"name": "TP_NACIONALIDADE",
+				"type": "String"
+			},
+			{
+				"name": "CO_MUNICIPIO_NASCIMENTO",
+				"type": "String"
+			},
+			{
+				"name": "NO_MUNICIPIO_NASCIMENTO",
+				"type": "String"
+			},
+			{
+				"name": "CO_UF_NASCIMENTO",
+				"type": "String"
+			},
+			{
+				"name": "SG_UF_NASCIMENTO",
+				"type": "String"
+			},
+			{
+				"name": "TP_ST_CONCLUSAO",
+				"type": "String"
+			},
+			{
+				"name": "TP_ANO_CONCLUIU",
+				"type": "String"
+			},
+			{
+				"name": "TP_ESCOLA",
+				"type": "String"
+			},
+			{
+				"name": "TP_ENSINO",
+				"type": "String"
+			},
+			{
+				"name": "IN_TREINEIRO",
+				"type": "String"
+			},
+			{
+				"name": "CO_ESCOLA",
+				"type": "String"
+			},
+			{
+				"name": "CO_MUNICIPIO_ESC",
+				"type": "String"
+			},
+			{
+				"name": "NO_MUNICIPIO_ESC",
+				"type": "String"
+			},
+			{
+				"name": "CO_UF_ESC",
+				"type": "String"
+			},
+			{
+				"name": "SG_UF_ESC",
+				"type": "String"
+			},
+			{
+				"name": "TP_DEPENDENCIA_ADM_ESC",
+				"type": "String"
+			},
+			{
+				"name": "TP_LOCALIZACAO_ESC",
+				"type": "String"
+			},
+			{
+				"name": "TP_SIT_FUNC_ESC",
+				"type": "String"
+			},
+			{
+				"name": "Q001",
+				"type": "String"
+			},
+			{
+				"name": "Q002",
+				"type": "String"
+			},
+			{
+				"name": "Q003",
+				"type": "String"
+			},
+			{
+				"name": "Q004",
+				"type": "String"
+			},
+			{
+				"name": "Q005",
+				"type": "String"
+			},
+			{
+				"name": "Q006",
+				"type": "String"
+			},
+			{
+				"name": "Q007",
+				"type": "String"
+			},
+			{
+				"name": "Q008",
+				"type": "String"
+			},
+			{
+				"name": "Q009",
+				"type": "String"
+			},
+			{
+				"name": "Q010",
+				"type": "String"
+			},
+			{
+				"name": "Q011",
+				"type": "String"
+			},
+			{
+				"name": "Q012",
+				"type": "String"
+			},
+			{
+				"name": "Q013",
+				"type": "String"
+			},
+			{
+				"name": "Q014",
+				"type": "String"
+			},
+			{
+				"name": "Q015",
+				"type": "String"
+			},
+			{
+				"name": "Q016",
+				"type": "String"
+			},
+			{
+				"name": "Q017",
+				"type": "String"
+			},
+			{
+				"name": "Q018",
+				"type": "String"
+			},
+			{
+				"name": "Q019",
+				"type": "String"
+			},
+			{
+				"name": "Q020",
+				"type": "String"
+			},
+			{
+				"name": "Q021",
+				"type": "String"
+			},
+			{
+				"name": "Q022",
+				"type": "String"
+			},
+			{
+				"name": "Q023",
+				"type": "String"
+			},
+			{
+				"name": "Q024",
+				"type": "String"
+			}
+		]
+	}
+}
