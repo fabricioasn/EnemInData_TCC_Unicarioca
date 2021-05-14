@@ -1,10 +1,6 @@
 {
 	"name": "DestinationDataset_ydg",
 	"properties": {
-		"linkedServiceName": {
-			"referenceName": "AzureSqlDatabaseCopyData",
-			"type": "LinkedServiceReference"
-		},
 		"annotations": [],
 		"type": "AzureSqlTable",
 		"schema": [

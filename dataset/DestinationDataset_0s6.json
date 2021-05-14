@@ -1,10 +1,6 @@
 {
 	"name": "DestinationDataset_0s6",
 	"properties": {
-		"linkedServiceName": {
-			"referenceName": "AzureSqlDatabaseCopyData",
-			"type": "LinkedServiceReference"
-		},
 		"annotations": [],
 		"type": "AzureSqlTable",
 		"schema": [
