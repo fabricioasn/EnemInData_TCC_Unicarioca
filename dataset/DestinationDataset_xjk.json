@@ -101,7 +101,7 @@
 		],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "Dimension_Table_Info_Prova"
+			"table": "Dimension_Table_Info_Pessoal"
 		}
 	}
 }
