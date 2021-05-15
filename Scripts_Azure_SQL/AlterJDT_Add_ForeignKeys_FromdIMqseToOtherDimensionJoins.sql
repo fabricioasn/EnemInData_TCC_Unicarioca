@@ -1,4 +1,4 @@
-ALTER TABLE jdt.Join_Dim_QSE_InfoPessoa
+/* ALTER TABLE jdt.Join_Dim_QSE_InfoPessoa
    ADD CONSTRAINT FK_Join_Dim_QSE_InfoPessoa FOREIGN KEY (NU_INSCRICAO)
       REFERENCES dbo.Enem_Fact_Table (NU_INSCRICAO)
       ON DELETE CASCADE
@@ -12,6 +12,12 @@ ALTER TABLE jdt.Join_Dim_QSE_InfoProva
 	  
 ALTER TABLE jdt.Join_Dim_QSE_STEM
    ADD CONSTRAINT FK_Join_Dim_QSE_STEM FOREIGN KEY (NU_INSCRICAO)
+      REFERENCES dbo.Enem_Fact_Table (NU_INSCRICAO)
+      ON DELETE CASCADE
+      ON UPDATE CASCADE */
+	  
+ALTER TABLE [jdt].[Join_Dim_InfoProva_InfoPessoa_STEM_QSE]
+   ADD CONSTRAINT FK_Join_Dim_AllDimensions FOREIGN KEY (NU_INSCRICAO)
       REFERENCES dbo.Enem_Fact_Table (NU_INSCRICAO)
       ON DELETE CASCADE
       ON UPDATE CASCADE
