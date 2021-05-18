@@ -13,8 +13,7 @@
 				"fileName": "JoinFactDimensions_InfoProva_InfoPessoa_STEM_QSE.csv",
 				"folderPath": "TransformedModel/Stagging_Area_NonPreprocessedModel"
 			},
-			"columnDelimiter": ";",
-			"encodingName": "UTF-7",
+			"columnDelimiter": ",",
 			"escapeChar": "\\",
 			"firstRowAsHeader": true,
 			"quoteChar": "\""
