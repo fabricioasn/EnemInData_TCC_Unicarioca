@@ -1,7 +1,0 @@
-C:\Users\mateus\source\repos\EnemVS\EnemVS\bin\Model.asdatabase
-C:\Users\mateus\source\repos\EnemVS\EnemVS\bin\Model.deploymenttargets
-C:\Users\mateus\source\repos\EnemVS\EnemVS\bin\Model.deploymentoptions
-C:\Users\mateus\source\repos\EnemVS\EnemVS\obj\Development\EnemVS.smproj.CoreCompileInputs.cache
-C:\Users\mateus\source\repos\EnemVS\EnemVS\obj\Development\Model.asdatabase
-C:\Users\mateus\source\repos\EnemVS\EnemVS\obj\Development\Model.deploymentoptions
-C:\Users\mateus\source\repos\EnemVS\EnemVS\obj\Development\Model.deploymenttargets
