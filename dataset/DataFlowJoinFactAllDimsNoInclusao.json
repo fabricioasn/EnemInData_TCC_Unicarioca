@@ -11,10 +11,9 @@
 			"location": {
 				"type": "AzureDataLakeStoreLocation",
 				"fileName": "JoinFactDimensions_InfoProva_InfoPessoa_STEM_QSE.csv",
-				"folderPath": "TransformedModel/ModeledData_NonPreProcessed"
+				"folderPath": "TransformedModel/Stagging_Area_NonPreprocessedModel"
 			},
-			"columnDelimiter": ";",
-			"encodingName": "UTF-7",
+			"columnDelimiter": ",",
 			"escapeChar": "\\",
 			"firstRowAsHeader": true,
 			"quoteChar": "\""
