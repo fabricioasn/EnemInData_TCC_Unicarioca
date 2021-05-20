@@ -18,6 +18,8 @@ drop column  [CO_MUNICIPIO_RESIDENCIA]
       ,[TP_ANO_CONCLUIU]
       ,[CO_ESCOLA]
       ,[CO_MUNICIPIO_ESC]
-      ,[CO_UF_ESC];
+      ,[CO_UF_ESC]
+	  ,[CO_UF_PROVA]
+	  ,[CO_MUNICIPIO_PROVA];
 	  
 
