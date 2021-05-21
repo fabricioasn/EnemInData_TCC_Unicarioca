@@ -77,5 +77,6 @@ CREATE TABLE [jft].[Join_FactDim_InfoProva_InfoPessoa_STEM_QSE](
     [Q021] [varchar](150) NULL,
     [Q022] [varchar](150) NULL,
     [Q023] [varchar](150) NULL,
-    [Q024] [varchar](150) NULL
+    [Q024] [varchar](150) NULL,
+	[Q025] [varchar](150) NULL
 );

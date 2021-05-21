@@ -1,4 +1,4 @@
-begin transaction [ExamCodes]
+begin transaction [ExamCodesNS]
 
 begin try
 
@@ -21,6 +21,25 @@ set CO_PROVA_CN = 'NSEC - RPC'
 where CO_PROVA_CN in  ('543','544','545','546')
 
 
+commit transaction [ExamCodesCN]
+
+end try
+
+BEGIN CATCH
+
+ROLLBACK TRANSACTION [ExamCodesCN]
+
+END CATCH 
+
+go
+
+
+
+begin transaction [ExamCodesHS]
+
+begin try
+
+
 -- HUMAN SCIENCE EXAM`S CODES
 update jft.Join_FactDim_InfoProva_InfoPessoa_STEM_QSE
 set CO_PROVA_CH = 'HSEC - NRM'
@@ -37,6 +56,26 @@ where CO_PROVA_CH in  ('524')
 update jft.Join_FactDim_InfoProva_InfoPessoa_STEM_QSE
 set CO_PROVA_CH = 'HSEC - RPC'
 where CO_PROVA_CH in  ('547','548','549','550')
+
+
+commit transaction [ExamCodesHN]
+
+end try
+
+BEGIN CATCH
+
+ROLLBACK TRANSACTION [ExamCodesHN]
+
+END CATCH 
+
+go
+
+
+
+
+begin transaction [ExamCodesLC]
+
+begin try
 
 
 -- LANGUAGE AND ITS CODES EXAM`S CODES
@@ -57,6 +96,26 @@ set CO_PROVA_LC = 'LCEC - RPC'
 where CO_PROVA_LC in  ('551','552','553','554')
 
 
+commit transaction [ExamCodesLC]
+
+end try
+
+BEGIN CATCH
+
+ROLLBACK TRANSACTION [ExamCodesLC]
+
+END CATCH 
+
+go
+
+
+
+
+begin transaction [ExamCodesMC]
+
+begin try
+
+
 -- MATH AND ITS CODES EXAM`S CODES
 update jft.Join_FactDim_InfoProva_InfoPessoa_STEM_QSE
 set CO_PROVA_MT = 'MEEC - NRM'
@@ -75,6 +134,25 @@ set CO_PROVA_MT = 'MEEC - RPC'
 where CO_PROVA_MT in  ('555','556','557','558')
 
 
+commit transaction [ExamCodesMC]
+
+end try
+
+BEGIN CATCH
+
+ROLLBACK TRANSACTION [ExamCodesMC]
+
+END CATCH 
+
+go
+
+
+
+begin transaction [ExamCodesLT]
+
+begin try
+
+
 -- FOREIGN LANGUAGE TYPE 
 update jft.Join_FactDim_InfoProva_InfoPessoa_STEM_QSE
 set TP_LINGUA = 'FLE'
@@ -85,13 +163,13 @@ set TP_LINGUA = 'FLS'
 where TP_LINGUA in  ('1')
 
 
-commit transaction [ExamCodes]
+commit transaction [ExamCodesLT]
 
 end try
 
 BEGIN CATCH
 
-ROLLBACK TRANSACTION [ExamCodes]
+ROLLBACK TRANSACTION [ExamCodesLT]
 
 END CATCH 
 
