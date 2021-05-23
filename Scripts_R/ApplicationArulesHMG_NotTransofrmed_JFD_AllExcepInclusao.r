@@ -1,6 +1,6 @@
 require(arules)
 
-JFD_AllExcptInclusaofile=read.transactions("C:/Users/Fabricio/OneDrive/Documents/TCC/Bases/JoinFactDimensions_InfoProva_InfoPessoa_STEM_QSE.csv",sep=",")
+JFD_AllExcptInclusaofile=read.transactions("C:/Users/Fabricio/OneDrive/Documents/TCC/Bases/JoinFactDimensionsDataMiningStaging.csv",sep=";")
 JFD_AllExcptInclusaofile<-JFD_AllExcptInclusaofile[-1,]
 RulejfdAllDimExInc<-apriori(JFD_AllExcptInclusaofile,parameter = list(support=0.5,confidence=0.7,minlen=1,maxlen=4))
 VisualdfAeI=data.frame(lhs=labels(lhs(RulejfdAllDimExInc)),rhs=labels(rhs(RulejfdAllDimExInc)),RulejfdAllDimExInc@quality)

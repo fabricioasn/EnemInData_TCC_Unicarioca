@@ -1,0 +1,4 @@
+USE [EnemLinkedServerSQL]
+GO
+DBCC SHRINKFILE (N'EnememRDM_log' , 0, TRUNCATEONLY)
+GO
