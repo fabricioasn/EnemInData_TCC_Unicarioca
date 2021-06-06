@@ -1,3 +1,4 @@
 *.dictionary filter=lfs diff=lfs merge=lfs -text
 *.hidx filter=lfs diff=lfs merge=lfs -text
 *.idf filter=lfs diff=lfs merge=lfs -text
+*.sql linguist-detectable=true 
