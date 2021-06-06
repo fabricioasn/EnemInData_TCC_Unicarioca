@@ -4,7 +4,7 @@ Este repositório armazena todos os códigos, documentação e arquivos fonte de
 
 Coleta | armazenamento: Portal INEP + Azure DataLake Storage Gen1
 
-Pré-Processamento | Transformação(ETL): Azure Data Factory + Mapping DataFlows
+Pré-Processamento | Transformação(ETL): Azure Data Factory
 
 Modelagem de DW: Azure SQL Database + SQL Server 2019 Express
 
